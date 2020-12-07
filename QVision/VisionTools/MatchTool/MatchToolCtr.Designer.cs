@@ -67,9 +67,10 @@
             // 
             this.panel1.Controls.Add(this.hSmartWindowControl1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Location = new System.Drawing.Point(1, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(1, 0, 0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1232, 994);
+            this.panel1.Size = new System.Drawing.Size(1237, 1000);
             this.panel1.TabIndex = 0;
             // 
             // hSmartWindowControl1
@@ -86,9 +87,9 @@
             this.hSmartWindowControl1.Location = new System.Drawing.Point(0, 0);
             this.hSmartWindowControl1.Margin = new System.Windows.Forms.Padding(0);
             this.hSmartWindowControl1.Name = "hSmartWindowControl1";
-            this.hSmartWindowControl1.Size = new System.Drawing.Size(1232, 994);
+            this.hSmartWindowControl1.Size = new System.Drawing.Size(1237, 1000);
             this.hSmartWindowControl1.TabIndex = 0;
-            this.hSmartWindowControl1.WindowSize = new System.Drawing.Size(1232, 994);
+            this.hSmartWindowControl1.WindowSize = new System.Drawing.Size(1237, 1000);
             this.hSmartWindowControl1.Load += new System.EventHandler(this.hSmartWindowControl1_Load);
             // 
             // panel2
@@ -100,9 +101,10 @@
             this.panel2.Controls.Add(this.hSmartWindowControl2);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(1241, 3);
+            this.panel2.Location = new System.Drawing.Point(1238, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(356, 994);
+            this.panel2.Size = new System.Drawing.Size(362, 1000);
             this.panel2.TabIndex = 1;
             // 
             // listBox1
@@ -140,9 +142,9 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(25, 81);
+            this.label4.Location = new System.Drawing.Point(18, 84);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(65, 12);
+            this.label4.Size = new System.Drawing.Size(114, 21);
             this.label4.TabIndex = 15;
             this.label4.Text = "numMatches";
             // 
@@ -151,22 +153,22 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(25, 42);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(53, 12);
+            this.label3.Size = new System.Drawing.Size(81, 21);
             this.label3.TabIndex = 14;
             this.label3.Text = "minScore";
             // 
             // txt_numMatch
             // 
-            this.txt_numMatch.Location = new System.Drawing.Point(96, 78);
+            this.txt_numMatch.Location = new System.Drawing.Point(138, 81);
             this.txt_numMatch.Name = "txt_numMatch";
-            this.txt_numMatch.Size = new System.Drawing.Size(100, 21);
+            this.txt_numMatch.Size = new System.Drawing.Size(100, 27);
             this.txt_numMatch.TabIndex = 13;
             // 
             // txtbox_minscore
             // 
-            this.txtbox_minscore.Location = new System.Drawing.Point(96, 39);
+            this.txtbox_minscore.Location = new System.Drawing.Point(138, 39);
             this.txtbox_minscore.Name = "txtbox_minscore";
-            this.txtbox_minscore.Size = new System.Drawing.Size(100, 21);
+            this.txtbox_minscore.Size = new System.Drawing.Size(100, 27);
             this.txtbox_minscore.TabIndex = 12;
             // 
             // button1
@@ -209,9 +211,11 @@
             // 
             // MatchToolCtr
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.tableLayoutPanel1);
+            this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(1, 0, 0, 0);
             this.Name = "MatchToolCtr";
             this.Size = new System.Drawing.Size(1600, 1000);
             this.Load += new System.EventHandler(this.MatchToolCtr_Load);

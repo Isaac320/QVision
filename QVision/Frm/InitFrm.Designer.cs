@@ -134,7 +134,7 @@
             // 
             // pictureBox4
             // 
-            this.pictureBox4.Image = global::QVision.Properties.Resources._145;
+            //this.pictureBox4.Image = global::QVision.Properties.Resources._145;
             this.pictureBox4.Location = new System.Drawing.Point(21, 171);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(47, 38);
@@ -144,7 +144,7 @@
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Image = global::QVision.Properties.Resources._46;
+           // this.pictureBox3.Image = global::QVision.Properties.Resources._46;
             this.pictureBox3.Location = new System.Drawing.Point(21, 121);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(47, 38);
@@ -154,7 +154,7 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::QVision.Properties.Resources._102;
+           // this.pictureBox2.Image = global::QVision.Properties.Resources._102;
             this.pictureBox2.Location = new System.Drawing.Point(21, 74);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(47, 38);
@@ -164,7 +164,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::QVision.Properties.Resources._29;
+            //this.pictureBox1.Image = global::QVision.Properties.Resources._29;
             this.pictureBox1.Location = new System.Drawing.Point(21, 21);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(47, 38);

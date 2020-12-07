@@ -23,7 +23,7 @@ namespace QVision.Frm
         {
             if (!Global.ready2Go)
             {
-                using (InitFrm initfrm = new InitFrm())
+                using (InitFrm2 initfrm = new InitFrm2())
                 {
                     if (initfrm.ShowDialog() == DialogResult.OK)
                     {

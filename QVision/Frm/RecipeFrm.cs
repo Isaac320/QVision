@@ -117,5 +117,10 @@ namespace QVision.Frm
         {
 
         }
+
+        private void bt_test_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

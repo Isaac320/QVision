@@ -1,27 +1,46 @@
-﻿using System;
+﻿using QVision.Report;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Windows.Forms;
-using QVision.Frm;
-using QVision.Report;
 using System.Threading;
+using System.Windows.Forms;
 
-namespace QVision
+namespace QVision.Frm
 {
-    public partial class MainFrm : Form
+    public partial class MainFrm2 : Form
     {
-       
-        public MainFrm()
+        public MainFrm2()
         {
             InitializeComponent();
         }
 
-        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        private void moveSidePanle(Control btn)
         {
+            panelSide.Top = btn.Top;
+            panelSide.Height = btn.Height;
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+      
+
+        private void btn_Close_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btn_home_Click(object sender, EventArgs e)
+        {
+            moveSidePanle(btn_home);
+            //UC_Home uch = new UC_Home();
+            //AddControlToPlane(uch);
             try
             {
                 Cursor.Current = Cursors.WaitCursor;
@@ -40,11 +59,11 @@ namespace QVision
             {
                 MessageBox.Show(ee.ToString());
             }
-
         }
 
-        private void toolStripMenuItem2_Click(object sender, EventArgs e)
+        private void btn_recipe_Click(object sender, EventArgs e)
         {
+            moveSidePanle(btn_recipe);
             try
             {
                 Cursor.Current = Cursors.WaitCursor;
@@ -63,35 +82,11 @@ namespace QVision
             {
                 MessageBox.Show(ee.ToString());
             }
-
         }
 
-        private void MainFrm_Load(object sender, EventArgs e)
+        private void btn_config_Click(object sender, EventArgs e)
         {
-            SplashFrm.num = 30;
-            Frames.videoFrm = new VideoFrm();
-            Frames.recipeFrm = new RecipeFrm();
-            Frames.settingFrm = new SettingFrm();
-            Frames.reportFrm = new ReportFrm();
-            SplashFrm.num = 60;
-            Thread.Sleep(1200);
-            SplashFrm.num = 100;
-
-            this.WindowState = FormWindowState.Maximized;
-            this.Visible = true;
-            Frames.videoFrm.MdiParent = this;
-            Frames.videoFrm.Dock = DockStyle.Fill;
-            Frames.videoFrm.Show();
-            Frames.videoFrm.Activate();
-
-            ImgProcess.Project.getInstance().Init();
-
-
-
-        }
-
-        private void toolStripMenuItem3_Click(object sender, EventArgs e)
-        {
+            moveSidePanle(btn_config);
             try
             {
                 Cursor.Current = Cursors.WaitCursor;
@@ -110,31 +105,11 @@ namespace QVision
             {
                 MessageBox.Show(ee.ToString());
             }
-
         }
 
-        private void 关于ToolStripMenuItem_Click(object sender, EventArgs e)
+        private void btn_report_Click(object sender, EventArgs e)
         {
-            using (Frm.AboutFrm aboutFrm = new Frm.AboutFrm())
-            {
-                aboutFrm.ShowDialog();
-            }
-        }
-
-        protected override void OnClosing(CancelEventArgs e)
-        {
-            if (MessageBox.Show("退出本系统?", "提示", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
-            {
-                Application.Exit();
-            }
-            else
-            {
-                e.Cancel = true;
-            }
-        }
-
-        private void toolStripMenuItem4_Click(object sender, EventArgs e)
-        {
+            moveSidePanle(btn_report);
             try
             {
                 Cursor.Current = Cursors.WaitCursor;
@@ -155,9 +130,36 @@ namespace QVision
             }
         }
 
-        private void toolStripProgressBar1_Click(object sender, EventArgs e)
+        private void btn_help_Click(object sender, EventArgs e)
         {
+            moveSidePanle(btn_help);
+        }
 
+        private void MainFrm2_Load(object sender, EventArgs e)
+        {
+            SplashFrm.num = 30;
+            Frames.videoFrm = new VideoFrm();
+            Frames.recipeFrm = new RecipeFrm();
+            Frames.settingFrm = new SettingFrm();
+            Frames.reportFrm = new ReportFrm();
+            SplashFrm.num = 60;
+            Thread.Sleep(1200);
+            SplashFrm.num = 100;
+
+            this.WindowState = FormWindowState.Maximized;
+            this.Visible = true;
+            
+            Frames.videoFrm.MdiParent = this;
+            Frames.videoFrm.Dock = DockStyle.Fill;
+            Frames.videoFrm.Show();
+            Frames.videoFrm.Activate();
+            this.Opacity = 1;
+            ImgProcess.Project.getInstance().Init();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            lb_time.Text = DateTime.Now.ToString("HH:mm:ss");
         }
     }
 }

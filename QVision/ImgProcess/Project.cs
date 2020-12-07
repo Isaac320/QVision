@@ -138,10 +138,21 @@ namespace QVision.ImgProcess
                                 Frames.videoFrm.showImage(hImage, 1);
                                 Frames.videoFrm.showImage(region, 1);
 
-                                Thread.Sleep(100);
+                                //Thread.Sleep(100);
 
                                 FrameResultArr[numFrameResultArr] = 1;
                                 numFrameResultArr++;
+
+                                //判断是否暂停
+                                if (Global.mySwitch1)
+                                {
+                                    Global.mySwitch2 = true;
+                                    while (Global.mySwitch2 && Global.mySwitch1)
+                                    {
+                                        Thread.Sleep(100);
+                                    }
+                                }
+
                             }
                             #region   处理过程 需要重写
 

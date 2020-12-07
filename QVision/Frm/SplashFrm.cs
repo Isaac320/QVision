@@ -30,5 +30,10 @@ namespace QVision.Frm
                 this.Close();
             }
         }
+
+        private void SplashFrm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

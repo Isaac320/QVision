@@ -4,6 +4,7 @@ using System.Linq;
 using System.Windows.Forms;
 using QVision.Tools;
 using System.Threading;
+using QVision.Frm;
 
 namespace QVision
 {
@@ -23,7 +24,7 @@ namespace QVision
                 Thread t = new Thread(ShowSplashFrm);
                 t.Start();
                 Thread.Sleep(100);
-                Application.Run(new MainFrm());
+                Application.Run(new MainFrm2());
             }
             catch (Exception ee)
             {

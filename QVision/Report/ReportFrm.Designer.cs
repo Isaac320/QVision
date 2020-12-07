@@ -134,7 +134,7 @@
             // bt_Query
             // 
             this.bt_Query.BackColor = System.Drawing.Color.White;
-            this.bt_Query.BackgroundImage = global::QVision.Properties.Resources._23;
+            //this.bt_Query.BackgroundImage = global::QVision.Properties.Resources._23;
             this.bt_Query.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.bt_Query.Location = new System.Drawing.Point(769, 24);
             this.bt_Query.Name = "bt_Query";

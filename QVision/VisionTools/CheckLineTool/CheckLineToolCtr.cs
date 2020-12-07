@@ -16,7 +16,7 @@ namespace QVision.VisionTools.CheckLineTool
         HDrawingObject rectCheck = null;        
         HTuple rectParams = new HTuple("row1", "column1", "row2", "column2");
 
-        bool checkFlag = true;
+        bool checkFlag = false;
         public CheckLineToolCtr()
         {
             InitializeComponent();
@@ -169,6 +169,10 @@ namespace QVision.VisionTools.CheckLineTool
 
         private void button1_Click(object sender, EventArgs e)
         {
+            bool tempFlag = checkFlag;
+            checkFlag = true;
+            updateRect();
+            checkFlag = tempFlag;
 
         }
     }

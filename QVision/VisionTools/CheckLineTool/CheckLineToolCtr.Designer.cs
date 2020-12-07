@@ -75,9 +75,10 @@
             // 
             this.panel1.Controls.Add(this.hSmartWindowControl1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1250, 994);
+            this.panel1.Size = new System.Drawing.Size(1256, 1000);
             this.panel1.TabIndex = 0;
             // 
             // hSmartWindowControl1
@@ -94,9 +95,9 @@
             this.hSmartWindowControl1.Location = new System.Drawing.Point(0, 0);
             this.hSmartWindowControl1.Margin = new System.Windows.Forms.Padding(0);
             this.hSmartWindowControl1.Name = "hSmartWindowControl1";
-            this.hSmartWindowControl1.Size = new System.Drawing.Size(1250, 994);
+            this.hSmartWindowControl1.Size = new System.Drawing.Size(1256, 1000);
             this.hSmartWindowControl1.TabIndex = 0;
-            this.hSmartWindowControl1.WindowSize = new System.Drawing.Size(1250, 994);
+            this.hSmartWindowControl1.WindowSize = new System.Drawing.Size(1256, 1000);
             this.hSmartWindowControl1.Load += new System.EventHandler(this.hSmartWindowControl1_Load);
             // 
             // panel2
@@ -106,9 +107,10 @@
             this.panel2.Controls.Add(this.groupBox1);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(1259, 3);
+            this.panel2.Location = new System.Drawing.Point(1256, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(338, 994);
+            this.panel2.Size = new System.Drawing.Size(344, 1000);
             this.panel2.TabIndex = 1;
             // 
             // button1
@@ -124,11 +126,9 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Checked = true;
-            this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox1.Location = new System.Drawing.Point(35, 355);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(78, 16);
+            this.checkBox1.Size = new System.Drawing.Size(97, 25);
             this.checkBox1.TabIndex = 4;
             this.checkBox1.Text = "real time";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -159,7 +159,7 @@
             this.lb_sigma.AutoSize = true;
             this.lb_sigma.Location = new System.Drawing.Point(211, 30);
             this.lb_sigma.Name = "lb_sigma";
-            this.lb_sigma.Size = new System.Drawing.Size(11, 12);
+            this.lb_sigma.Size = new System.Drawing.Size(19, 21);
             this.lb_sigma.TabIndex = 10;
             this.lb_sigma.Text = "1";
             // 
@@ -168,7 +168,7 @@
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(19, 30);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(35, 12);
+            this.label8.Size = new System.Drawing.Size(58, 21);
             this.label8.TabIndex = 9;
             this.label8.Text = "Sigma";
             // 
@@ -187,9 +187,9 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(19, 187);
+            this.label6.Location = new System.Drawing.Point(6, 187);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(59, 12);
+            this.label6.Size = new System.Drawing.Size(84, 21);
             this.label6.TabIndex = 7;
             this.label6.Text = "LightDark";
             // 
@@ -202,7 +202,7 @@
             "Dark"});
             this.comboBox1.Location = new System.Drawing.Point(101, 184);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 20);
+            this.comboBox1.Size = new System.Drawing.Size(121, 29);
             this.comboBox1.TabIndex = 6;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
@@ -211,7 +211,7 @@
             this.lb_high.AutoSize = true;
             this.lb_high.Location = new System.Drawing.Point(211, 130);
             this.lb_high.Name = "lb_high";
-            this.lb_high.Size = new System.Drawing.Size(11, 12);
+            this.lb_high.Size = new System.Drawing.Size(19, 21);
             this.lb_high.TabIndex = 5;
             this.lb_high.Text = "1";
             // 
@@ -220,7 +220,7 @@
             this.lb_low.AutoSize = true;
             this.lb_low.Location = new System.Drawing.Point(211, 81);
             this.lb_low.Name = "lb_low";
-            this.lb_low.Size = new System.Drawing.Size(11, 12);
+            this.lb_low.Size = new System.Drawing.Size(19, 21);
             this.lb_low.TabIndex = 4;
             this.lb_low.Text = "1";
             // 
@@ -229,7 +229,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(19, 130);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(29, 12);
+            this.label3.Size = new System.Drawing.Size(45, 21);
             this.label3.TabIndex = 3;
             this.label3.Text = "High";
             // 
@@ -238,7 +238,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(19, 81);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(23, 12);
+            this.label2.Size = new System.Drawing.Size(41, 21);
             this.label2.TabIndex = 2;
             this.label2.Text = "Low";
             // 
@@ -276,9 +276,10 @@
             // 
             // CheckLineToolCtr
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.tableLayoutPanel1);
+            this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "CheckLineToolCtr";
             this.Size = new System.Drawing.Size(1600, 1000);
             this.Load += new System.EventHandler(this.CheckLineToolCtr_Load);

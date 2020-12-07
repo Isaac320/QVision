@@ -69,7 +69,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::QVision.Properties.Resources.qqqqq;
+           // this.pictureBox1.Image = global::QVision.Properties.Resources.qqqqq;
             this.pictureBox1.Location = new System.Drawing.Point(133, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(123, 85);

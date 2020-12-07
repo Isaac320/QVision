@@ -15,6 +15,7 @@ namespace QVision.VisionTools.CheckLineTool
 
         private string lightDark = "dark";
 
+        [NonSerialized]
         private HXLDCont lines;
 
         public double Sigma

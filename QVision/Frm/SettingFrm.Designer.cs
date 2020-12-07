@@ -240,7 +240,6 @@
             // 
             // button1
             // 
-            this.button1.BackgroundImage = global::QVision.Properties.Resources._77;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button1.Location = new System.Drawing.Point(323, 49);
             this.button1.Name = "button1";
@@ -281,7 +280,6 @@
             // 
             // Btn_Save
             // 
-            this.Btn_Save.BackgroundImage = global::QVision.Properties.Resources._25;
             this.Btn_Save.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Btn_Save.Location = new System.Drawing.Point(1275, 729);
             this.Btn_Save.Name = "Btn_Save";
@@ -302,8 +300,8 @@
             // 
             // SettingFrm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1784, 961);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Btn_Save);
