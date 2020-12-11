@@ -126,6 +126,12 @@
     <Compile Include="Frm\TrayIDFrm.Designer.cs">
       <DependentUpon>TrayIDFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frm\TrayIDFrm2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm\TrayIDFrm2.Designer.cs">
+      <DependentUpon>TrayIDFrm2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm\VideoFrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -222,6 +228,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Frm\TrayIDFrm.resx">
       <DependentUpon>TrayIDFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm\TrayIDFrm2.resx">
+      <DependentUpon>TrayIDFrm2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm\VideoFrm.resx">
       <DependentUpon>VideoFrm.cs</DependentUpon>

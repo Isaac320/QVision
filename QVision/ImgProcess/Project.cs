@@ -424,7 +424,7 @@ namespace QVision.ImgProcess
         private void GetTrayID()
         {
             //需要弹窗，让人填写trayID
-            using (TrayIDFrm trayIDFrm = new TrayIDFrm())
+            using (TrayIDFrm2 trayIDFrm = new TrayIDFrm2())
             {
                 if (trayIDFrm.ShowDialog() == DialogResult.OK)
                 {
