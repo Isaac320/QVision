@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
@@ -58,6 +59,8 @@
             this.listView1 = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -163,15 +166,17 @@
             this.tableLayoutPanel3.Controls.Add(this.panel7, 0, 2);
             this.tableLayoutPanel3.Controls.Add(this.panel6, 0, 1);
             this.tableLayoutPanel3.Controls.Add(this.panel5, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.progressBar1, 0, 4);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 4;
+            this.tableLayoutPanel3.RowCount = 5;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 21.44445F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.66666F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 17.44445F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 48.44444F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(342, 800);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
@@ -180,9 +185,10 @@
             this.groupBox3.Controls.Add(this.listBox1);
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(3, 414);
+            this.groupBox3.Location = new System.Drawing.Point(0, 403);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(0);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(336, 383);
+            this.groupBox3.Size = new System.Drawing.Size(342, 379);
             this.groupBox3.TabIndex = 4;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Operation Info";
@@ -193,18 +199,19 @@
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 21;
             this.listBox1.Location = new System.Drawing.Point(3, 23);
+            this.listBox1.Margin = new System.Windows.Forms.Padding(0);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(330, 357);
+            this.listBox1.Size = new System.Drawing.Size(336, 353);
             this.listBox1.TabIndex = 0;
             // 
             // panel7
             // 
             this.panel7.Controls.Add(this.groupBox4);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel7.Location = new System.Drawing.Point(0, 272);
+            this.panel7.Location = new System.Drawing.Point(0, 267);
             this.panel7.Margin = new System.Windows.Forms.Padding(0);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(342, 139);
+            this.panel7.Size = new System.Drawing.Size(342, 136);
             this.panel7.TabIndex = 3;
             // 
             // groupBox4
@@ -215,7 +222,7 @@
             this.groupBox4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox4.Location = new System.Drawing.Point(0, 0);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(342, 139);
+            this.groupBox4.Size = new System.Drawing.Size(342, 136);
             this.groupBox4.TabIndex = 0;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Check Info";
@@ -242,10 +249,10 @@
             // 
             this.panel6.Controls.Add(this.groupBox1);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel6.Location = new System.Drawing.Point(0, 171);
+            this.panel6.Location = new System.Drawing.Point(0, 168);
             this.panel6.Margin = new System.Windows.Forms.Padding(0);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(342, 101);
+            this.panel6.Size = new System.Drawing.Size(342, 99);
             this.panel6.TabIndex = 2;
             // 
             // groupBox1
@@ -255,7 +262,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(342, 101);
+            this.groupBox1.Size = new System.Drawing.Size(342, 99);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Operation";
@@ -278,7 +285,7 @@
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
             this.tableLayoutPanel7.RowCount = 1;
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(336, 75);
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(336, 73);
             this.tableLayoutPanel7.TabIndex = 1;
             // 
             // panel8
@@ -287,7 +294,7 @@
             this.panel8.Location = new System.Drawing.Point(0, 0);
             this.panel8.Margin = new System.Windows.Forms.Padding(0);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(1, 75);
+            this.panel8.Size = new System.Drawing.Size(1, 73);
             this.panel8.TabIndex = 0;
             // 
             // panel12
@@ -297,7 +304,7 @@
             this.panel12.Location = new System.Drawing.Point(0, 0);
             this.panel12.Margin = new System.Windows.Forms.Padding(0);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(84, 75);
+            this.panel12.Size = new System.Drawing.Size(84, 73);
             this.panel12.TabIndex = 1;
             // 
             // bt_go
@@ -310,7 +317,7 @@
             this.bt_go.ForeColor = System.Drawing.Color.White;
             this.bt_go.Location = new System.Drawing.Point(0, 0);
             this.bt_go.Name = "bt_go";
-            this.bt_go.Size = new System.Drawing.Size(84, 75);
+            this.bt_go.Size = new System.Drawing.Size(84, 73);
             this.bt_go.TabIndex = 1;
             this.bt_go.Text = "Go";
             this.bt_go.UseVisualStyleBackColor = false;
@@ -323,7 +330,7 @@
             this.panel13.Location = new System.Drawing.Point(84, 0);
             this.panel13.Margin = new System.Windows.Forms.Padding(0);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(84, 75);
+            this.panel13.Size = new System.Drawing.Size(84, 73);
             this.panel13.TabIndex = 2;
             // 
             // bt_step
@@ -336,7 +343,7 @@
             this.bt_step.ForeColor = System.Drawing.Color.White;
             this.bt_step.Location = new System.Drawing.Point(0, 0);
             this.bt_step.Name = "bt_step";
-            this.bt_step.Size = new System.Drawing.Size(84, 75);
+            this.bt_step.Size = new System.Drawing.Size(84, 73);
             this.bt_step.TabIndex = 1;
             this.bt_step.Text = "Step";
             this.bt_step.UseVisualStyleBackColor = false;
@@ -349,7 +356,7 @@
             this.panel14.Location = new System.Drawing.Point(168, 0);
             this.panel14.Margin = new System.Windows.Forms.Padding(0);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(83, 75);
+            this.panel14.Size = new System.Drawing.Size(83, 73);
             this.panel14.TabIndex = 3;
             // 
             // bt_pause
@@ -362,7 +369,7 @@
             this.bt_pause.ForeColor = System.Drawing.Color.White;
             this.bt_pause.Location = new System.Drawing.Point(0, 0);
             this.bt_pause.Name = "bt_pause";
-            this.bt_pause.Size = new System.Drawing.Size(83, 75);
+            this.bt_pause.Size = new System.Drawing.Size(83, 73);
             this.bt_pause.TabIndex = 1;
             this.bt_pause.Text = "Pause";
             this.bt_pause.UseVisualStyleBackColor = false;
@@ -375,7 +382,7 @@
             this.panel17.Location = new System.Drawing.Point(251, 0);
             this.panel17.Margin = new System.Windows.Forms.Padding(0);
             this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(85, 75);
+            this.panel17.Size = new System.Drawing.Size(85, 73);
             this.panel17.TabIndex = 4;
             // 
             // bt_stop
@@ -388,7 +395,7 @@
             this.bt_stop.ForeColor = System.Drawing.Color.White;
             this.bt_stop.Location = new System.Drawing.Point(0, 0);
             this.bt_stop.Name = "bt_stop";
-            this.bt_stop.Size = new System.Drawing.Size(85, 75);
+            this.bt_stop.Size = new System.Drawing.Size(85, 73);
             this.bt_stop.TabIndex = 2;
             this.bt_stop.Text = "Stop";
             this.bt_stop.UseVisualStyleBackColor = false;
@@ -400,7 +407,7 @@
             this.panel5.Location = new System.Drawing.Point(0, 0);
             this.panel5.Margin = new System.Windows.Forms.Padding(0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(342, 171);
+            this.panel5.Size = new System.Drawing.Size(342, 168);
             this.panel5.TabIndex = 1;
             // 
             // groupBox2
@@ -410,7 +417,7 @@
             this.groupBox2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(0, 0);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(342, 171);
+            this.groupBox2.Size = new System.Drawing.Size(342, 168);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Product Info";
@@ -425,7 +432,7 @@
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(3, 23);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(336, 145);
+            this.listView1.Size = new System.Drawing.Size(336, 142);
             this.listView1.TabIndex = 1;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -439,6 +446,21 @@
             // 
             this.columnHeader2.Text = "Content";
             this.columnHeader2.Width = 253;
+            // 
+            // progressBar1
+            // 
+            this.progressBar1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.progressBar1.Location = new System.Drawing.Point(0, 782);
+            this.progressBar1.Margin = new System.Windows.Forms.Padding(0);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(342, 18);
+            this.progressBar1.TabIndex = 5;
+            this.progressBar1.Value = 20;
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // VideoFrm
             // 
@@ -504,5 +526,7 @@
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.Timer timer1;
     }
 }

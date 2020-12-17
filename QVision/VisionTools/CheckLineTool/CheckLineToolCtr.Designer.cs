@@ -280,6 +280,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.tableLayoutPanel1);
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(1, 0, 0, 0);
             this.Name = "CheckLineToolCtr";
             this.Size = new System.Drawing.Size(1600, 1000);
             this.Load += new System.EventHandler(this.CheckLineToolCtr_Load);

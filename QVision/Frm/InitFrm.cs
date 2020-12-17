@@ -32,7 +32,7 @@ namespace QVision.Frm
                 if (tempFlag)
                 {
                     //测试是否有相应的receipt
-                    string rpt = D2RManager.QueryReceipt(textBox2.Text);
+                    string rpt = D2RManager.QueryRecipe(textBox2.Text);
                     if (rpt != null)
                     {
                         //这边读recipe  以后需要改写 这里默认选了一个测试

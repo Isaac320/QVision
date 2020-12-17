@@ -12,7 +12,7 @@ using System.Threading;
 
 namespace QVision.ImgProcess
 {
-    class Project
+    class Project : IDisposable
     {
 
         Thread ImageProcessTh;  //图像处理总线程 
@@ -20,6 +20,7 @@ namespace QVision.ImgProcess
         private static Project instance = new Project();
 
         VisionTools.MatchTool.MatchTool matchTool;
+        VisionTools.CheckLineTool.CheckLineTool checkLineTool;
 
         private Project() { }
         
@@ -43,6 +44,8 @@ namespace QVision.ImgProcess
         public void InitRecipe()
         {
            matchTool = Global.Dict[Global.ToolName2] as VisionTools.MatchTool.MatchTool;
+           checkLineTool = Global.Dict[Global.ToolName3] as VisionTools.CheckLineTool.CheckLineTool;
+        
         }
 
 
@@ -129,16 +132,31 @@ namespace QVision.ImgProcess
                             
 
                             matchTool.Image = hImage;
+                            checkLineTool.Image = hImage;
                             //下面随便写个处理过程 无处理
                             for (int i = 1; i < matchTool.RegionNum+1; i++)
                             {
                                 HRegion region = matchTool.Regions.SelectObj(i);
-                                matchTool.Run(region, out HImage outImage);
-
+                                bool flag=matchTool.Run(region, out HImage outImage);
+                              
                                 Frames.videoFrm.showImage(hImage, 1);
                                 Frames.videoFrm.showImage(region, 1);
 
-                                //Thread.Sleep(100);
+                                
+                                if (flag)
+                                {
+                                    HRegion rCheckLine = new HRegion(checkLineTool.Rect1[0], checkLineTool.Rect1[1], checkLineTool.Rect1[2], checkLineTool.Rect1[3]);
+                                    HRegion rCheckLine2 = matchTool.HomMat.AffineTransRegion(rCheckLine, "nearest_neighbor");                                   
+                                    Frames.videoFrm.showImage(rCheckLine2, 2);
+
+                                    checkLineTool.Run(rCheckLine2);
+                                    Frames.videoFrm.showImage(checkLineTool.Lines, 1);
+
+                                }
+                               
+                               
+
+                                Thread.Sleep(100);
 
                                 FrameResultArr[numFrameResultArr] = 1;
                                 numFrameResultArr++;
@@ -434,6 +452,14 @@ namespace QVision.ImgProcess
 
             }
 
+        }
+
+        void IDisposable.Dispose()
+        {
+            if(ImageProcessTh!=null)
+            {
+                ImageProcessTh.Abort();
+            }
         }
     }
 }

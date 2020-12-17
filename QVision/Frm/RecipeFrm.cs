@@ -103,9 +103,16 @@ namespace QVision.Frm
         {
             try
             {
-                string path = @"d:\";
-                string name = "ss.zl";
-                RecipeTool.SerializableNow(path, name, Dict);
+                using (SaveRecipeFrm srf = new SaveRecipeFrm())
+                {
+                    if(srf.ShowDialog()==DialogResult.OK)
+                    {
+
+                    }
+                    //string path = @"d:\";
+                    //string name = "ss.zl";
+                    //RecipeTool.SerializableNow(path, name, Dict);
+                }
             }
             catch(Exception ee)
             {
@@ -115,7 +122,22 @@ namespace QVision.Frm
 
         private void bt_read_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                using (LoadRecipeFrm lrf = new LoadRecipeFrm())
+                {
+                    if (lrf.ShowDialog() == DialogResult.OK)
+                    {
+                        //string path = @"d:\";
+                        //string name = "ss.zl";
+                        Dict = RecipeTool.DeSerializeNow(Global.RecipePath+"\\", lrf.RecipeName);
+                    }
+                }
+            }
+            catch(Exception ee)
+            {
+                MessageBox.Show(ee.ToString());
+            }
         }
 
         private void bt_test_Click(object sender, EventArgs e)

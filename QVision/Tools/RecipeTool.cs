@@ -16,6 +16,10 @@ namespace QVision.Tools
         /// <param name="name">名字</param>
         public static void SerializableNow(string path, string name,Dictionary<string,object> Dict)
         {
+            if(!Directory.Exists(path))
+            {
+                Directory.CreateDirectory(path);
+            }
             FileStream fileStream = new FileStream(path + name, FileMode.Create);
             BinaryFormatter binF = new BinaryFormatter();
             binF.Serialize(fileStream, Dict);

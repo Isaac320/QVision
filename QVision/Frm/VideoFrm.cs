@@ -15,6 +15,8 @@ namespace QVision.Frm
     public partial class VideoFrm : Form
     {
         delegate void delegateShowMessage(string s);
+
+        delegate void delegateShowPValue(int a);
         public VideoFrm()
         {
             InitializeComponent();
@@ -58,7 +60,7 @@ namespace QVision.Frm
             }
             else
             {
-                HOperatorSet.SetColor(hSmartWindowControl1.HalconWindow, "red");
+                HOperatorSet.SetColor(hSmartWindowControl1.HalconWindow, "green");
             }
             hSmartWindowControl1.HalconWindow.DispObj(obj);
         }
@@ -155,6 +157,24 @@ namespace QVision.Frm
         private void hSmartWindowControl1_Load(object sender, EventArgs e)
         {
             hSmartWindowControl1.MouseWheel += hSmartWindowControl1.HSmartWindowControl_MouseWheel;
+        }
+
+        private void showPValue(int value)
+        {
+            progressBar1.Value = value;
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (progressBar1.InvokeRequired)
+            {
+                BeginInvoke(new delegateShowPValue(showPValue), new object[] { Global.WorkProgressNum });
+
+            }
+            else
+            {
+                progressBar1.Value = Global.WorkProgressNum;
+            }
         }
     }
 }

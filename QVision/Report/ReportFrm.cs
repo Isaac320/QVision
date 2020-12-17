@@ -90,7 +90,6 @@ namespace QVision.Report
             DataTable mydt = DataBaseTool.Query(sql);
             dataTableToListview(listView1, mydt);
 
-
         }
 
     }

@@ -33,7 +33,13 @@ namespace QVision.Frm
 
         private void btn_Close_Click(object sender, EventArgs e)
         {
-            this.Close();
+            using (PopTipFrm ptf = new PopTipFrm("Close?"))
+            {
+                if(ptf.ShowDialog()==DialogResult.OK)
+                {
+                    this.Close();
+                }
+            }
         }
 
         private void btn_home_Click(object sender, EventArgs e)
@@ -133,6 +139,10 @@ namespace QVision.Frm
         private void btn_help_Click(object sender, EventArgs e)
         {
             moveSidePanle(btn_help);
+            using (AboutFrm af = new AboutFrm())
+            {
+                af.ShowDialog();
+            }
         }
 
         private void MainFrm2_Load(object sender, EventArgs e)

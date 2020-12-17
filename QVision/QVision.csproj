@@ -90,6 +90,18 @@
     <Compile Include="Frm\InitFrm2.Designer.cs">
       <DependentUpon>InitFrm2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frm\LoadRecipeFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm\LoadRecipeFrm.Designer.cs">
+      <DependentUpon>LoadRecipeFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm\PopTipFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm\PopTipFrm.Designer.cs">
+      <DependentUpon>PopTipFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm\MainFrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +119,12 @@
     </Compile>
     <Compile Include="Frm\RecipeFrm.Designer.cs">
       <DependentUpon>RecipeFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm\SaveRecipeFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm\SaveRecipeFrm.Designer.cs">
+      <DependentUpon>SaveRecipeFrm.cs</DependentUpon>
     </Compile>
     <Compile Include="Frm\SettingFrm.cs">
       <SubType>Form</SubType>
@@ -211,6 +229,12 @@
     <EmbeddedResource Include="Frm\InitFrm2.resx">
       <DependentUpon>InitFrm2.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Frm\LoadRecipeFrm.resx">
+      <DependentUpon>LoadRecipeFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm\PopTipFrm.resx">
+      <DependentUpon>PopTipFrm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Frm\MainFrm.resx">
       <DependentUpon>MainFrm.cs</DependentUpon>
     </EmbeddedResource>
@@ -219,6 +243,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Frm\RecipeFrm.resx">
       <DependentUpon>RecipeFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm\SaveRecipeFrm.resx">
+      <DependentUpon>SaveRecipeFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm\SettingFrm.resx">
       <DependentUpon>SettingFrm.cs</DependentUpon>

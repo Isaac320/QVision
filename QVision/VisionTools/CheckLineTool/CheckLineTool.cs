@@ -40,7 +40,6 @@ namespace QVision.VisionTools.CheckLineTool
         {
             set { lightDark = value; }
             get { return lightDark; }
-
         }
 
 
@@ -66,6 +65,19 @@ namespace QVision.VisionTools.CheckLineTool
                 lines = ROIImage.LinesGauss(sigma, low, high, lightDark, "true", "bar-shaped", "true");
             }
             catch(Exception ee)
+            {
+
+            }
+        }
+
+        public void Run(HRegion hRegion)
+        {
+            try
+            {               
+                HImage ROIImage = himage.ReduceDomain(hRegion);
+                lines = ROIImage.LinesGauss(sigma, low, high, lightDark, "true", "bar-shaped", "true");
+            }
+            catch (Exception ee)
             {
 
             }
