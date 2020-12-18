@@ -25,15 +25,15 @@ namespace QVision
             try
             {
                 Cursor.Current = Cursors.WaitCursor;
-                if (this.ActiveMdiChild == Frames.videoFrm)
+                if (this.ActiveMdiChild == MyForms.videoFrm)
                 {
                     Cursor.Current = Cursors.Arrow;
                     return;
                 }
-                Frames.videoFrm.MdiParent = this;
-                Frames.videoFrm.Dock = DockStyle.Fill;
-                Frames.videoFrm.Show();
-                Frames.videoFrm.Activate();
+                MyForms.videoFrm.MdiParent = this;
+                MyForms.videoFrm.Dock = DockStyle.Fill;
+                MyForms.videoFrm.Show();
+                MyForms.videoFrm.Activate();
                 Cursor.Current = Cursors.Arrow;
             }
             catch (Exception ee)
@@ -48,15 +48,15 @@ namespace QVision
             try
             {
                 Cursor.Current = Cursors.WaitCursor;
-                if (this.ActiveMdiChild == Frames.recipeFrm)
+                if (this.ActiveMdiChild == MyForms.recipeFrm)
                 {
                     Cursor.Current = Cursors.Arrow;
                     return;
                 }
-                Frames.recipeFrm.MdiParent = this;
-                Frames.recipeFrm.Dock = DockStyle.Fill;
-                Frames.recipeFrm.Show();
-                Frames.recipeFrm.Activate();
+                MyForms.recipeFrm.MdiParent = this;
+                MyForms.recipeFrm.Dock = DockStyle.Fill;
+                MyForms.recipeFrm.Show();
+                MyForms.recipeFrm.Activate();
                 Cursor.Current = Cursors.Arrow;
             }
             catch (Exception ee)
@@ -69,20 +69,20 @@ namespace QVision
         private void MainFrm_Load(object sender, EventArgs e)
         {
             SplashFrm.num = 30;
-            Frames.videoFrm = new VideoFrm();
-            Frames.recipeFrm = new RecipeFrm();
-            Frames.settingFrm = new SettingFrm();
-            Frames.reportFrm = new ReportFrm();
+            MyForms.videoFrm = new VideoFrm();
+            MyForms.recipeFrm = new RecipeFrm();
+            MyForms.settingFrm = new SettingFrm();
+            MyForms.reportFrm = new ReportFrm();
             SplashFrm.num = 60;
             Thread.Sleep(1200);
             SplashFrm.num = 100;
 
             this.WindowState = FormWindowState.Maximized;
             this.Visible = true;
-            Frames.videoFrm.MdiParent = this;
-            Frames.videoFrm.Dock = DockStyle.Fill;
-            Frames.videoFrm.Show();
-            Frames.videoFrm.Activate();
+            MyForms.videoFrm.MdiParent = this;
+            MyForms.videoFrm.Dock = DockStyle.Fill;
+            MyForms.videoFrm.Show();
+            MyForms.videoFrm.Activate();
 
             ImgProcess.Project.getInstance().Init();
 
@@ -95,15 +95,15 @@ namespace QVision
             try
             {
                 Cursor.Current = Cursors.WaitCursor;
-                if (this.ActiveMdiChild == Frames.settingFrm)
+                if (this.ActiveMdiChild == MyForms.settingFrm)
                 {
                     Cursor.Current = Cursors.Arrow;
                     return;
                 }
-                Frames.settingFrm.MdiParent = this;
-                Frames.settingFrm.Dock = DockStyle.Fill;
-                Frames.settingFrm.Show();
-                Frames.settingFrm.Activate();
+                MyForms.settingFrm.MdiParent = this;
+                MyForms.settingFrm.Dock = DockStyle.Fill;
+                MyForms.settingFrm.Show();
+                MyForms.settingFrm.Activate();
                 Cursor.Current = Cursors.Arrow;
             }
             catch (Exception ee)
@@ -138,15 +138,15 @@ namespace QVision
             try
             {
                 Cursor.Current = Cursors.WaitCursor;
-                if (this.ActiveMdiChild == Frames.reportFrm)
+                if (this.ActiveMdiChild == MyForms.reportFrm)
                 {
                     Cursor.Current = Cursors.Arrow;
                     return;
                 }
-                Frames.reportFrm.MdiParent = this;
-                Frames.reportFrm.Dock = DockStyle.Fill;
-                Frames.reportFrm.Show();
-                Frames.reportFrm.Activate();
+                MyForms.reportFrm.MdiParent = this;
+                MyForms.reportFrm.Dock = DockStyle.Fill;
+                MyForms.reportFrm.Show();
+                MyForms.reportFrm.Activate();
                 Cursor.Current = Cursors.Arrow;
             }
             catch (Exception ee)

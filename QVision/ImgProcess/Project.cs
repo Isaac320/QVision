@@ -139,18 +139,18 @@ namespace QVision.ImgProcess
                                 HRegion region = matchTool.Regions.SelectObj(i);
                                 bool flag=matchTool.Run(region, out HImage outImage);
                               
-                                Frames.videoFrm.showImage(hImage, 1);
-                                Frames.videoFrm.showImage(region, 1);
+                                MyForms.videoFrm.showImage(hImage, 1);
+                                MyForms.videoFrm.showImage(region, 1);
 
                                 
                                 if (flag)
                                 {
                                     HRegion rCheckLine = new HRegion(checkLineTool.Rect1[0], checkLineTool.Rect1[1], checkLineTool.Rect1[2], checkLineTool.Rect1[3]);
                                     HRegion rCheckLine2 = matchTool.HomMat.AffineTransRegion(rCheckLine, "nearest_neighbor");                                   
-                                    Frames.videoFrm.showImage(rCheckLine2, 2);
+                                    MyForms.videoFrm.showImage(rCheckLine2, 2);
 
                                     checkLineTool.Run(rCheckLine2);
-                                    Frames.videoFrm.showImage(checkLineTool.Lines, 1);
+                                    MyForms.videoFrm.showImage(checkLineTool.Lines, 1);
 
                                 }
                                
@@ -320,19 +320,19 @@ namespace QVision.ImgProcess
                 else
                 {
                     //删除本地目录
-                    Frames.videoFrm.listBoxShowMessage("Deleting Temp Images..");
+                    MyForms.videoFrm.listBoxShowMessage("Deleting Temp Images..");
                     FileTool.DeleteDir(Global.TempImagePath);
-                    Frames.videoFrm.listBoxShowMessage("Delete Done");
+                    MyForms.videoFrm.listBoxShowMessage("Delete Done");
 
-                    Frames.videoFrm.listBoxShowMessage("Copying Images From Remote PC...");
+                    MyForms.videoFrm.listBoxShowMessage("Copying Images From Remote PC...");
                     FileTool.CopyDirectory(info[0].FullName, Global.TempImagePath, true);   //复制文件夹到本地电脑指定目录下
                     flag = false;
-                    Frames.videoFrm.listBoxShowMessage("Copy Done");
+                    MyForms.videoFrm.listBoxShowMessage("Copy Done");
 
                     //删除远程电脑目录下的文件
-                    Frames.videoFrm.listBoxShowMessage("Deleting Remote PC Images...");
+                    MyForms.videoFrm.listBoxShowMessage("Deleting Remote PC Images...");
                     FileTool.DeleteDir(Global.XRayImagePath);
-                    Frames.videoFrm.listBoxShowMessage("Delete Done");
+                    MyForms.videoFrm.listBoxShowMessage("Delete Done");
                 }
             }
         }
@@ -342,7 +342,7 @@ namespace QVision.ImgProcess
         /// </summary>
         private void EndTray(List<int[]> tempResult)
         {
-            Frames.videoFrm.listBoxShowMessage("Tray Finish");
+            MyForms.videoFrm.listBoxShowMessage("Tray Finish");
 
             ////写点墨文件
             FileTool.WriteInkPointTxt(tempResult);  //写文件
@@ -361,12 +361,12 @@ namespace QVision.ImgProcess
 
         private void EndLot()
         {
-            Frames.videoFrm.listBoxShowMessage("Lot Finish");
+            MyForms.videoFrm.listBoxShowMessage("Lot Finish");
 
 
             //写Lot Summary
             FileTool.WriteLotSummary();
-            Frames.videoFrm.listBoxShowMessage("Lot Summary Writed");
+            MyForms.videoFrm.listBoxShowMessage("Lot Summary Writed");
 
             Global.mMState = MachineState.Free;   //工作停止
 
@@ -435,7 +435,7 @@ namespace QVision.ImgProcess
 
             }
 
-            Frames.videoFrm.listBoxShowMessage("DataBase Writed");
+            MyForms.videoFrm.listBoxShowMessage("DataBase Writed");
 
         }
 

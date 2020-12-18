@@ -7,7 +7,7 @@ using QVision.Report;
 
 namespace QVision.Frm
 {
-    public class Frames
+    public class MyForms
     {
         public static RecipeFrm recipeFrm;
         public static SettingFrm settingFrm;

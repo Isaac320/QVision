@@ -77,7 +77,7 @@
     <Compile Include="Frm\EndTrayFrm.Designer.cs">
       <DependentUpon>EndTrayFrm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm\Frames.cs" />
+    <Compile Include="Frm\MyForms.cs" />
     <Compile Include="Frm\InitFrm.cs">
       <SubType>Form</SubType>
     </Compile>
