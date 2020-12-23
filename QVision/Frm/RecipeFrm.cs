@@ -61,6 +61,19 @@ namespace QVision.Frm
                         panel2.Controls.Add(checkLineToolCtr);
                         checkLineToolCtr.Dock = DockStyle.Fill;
                         break;
+                    case Global.ToolName4:
+                        //  VisionTools.MacthTool.MatchTool matchTool = (VisionTools.MacthTool.MatchTool)Dict["匹配工具"]; 
+                        VisionTools.BlobTool.BlobTool blobTool = (VisionTools.BlobTool.BlobTool)Dict[Global.ToolName4];
+
+                        if (hImage != null)
+                        {
+                            blobTool.Image = hImage;
+                        }
+                        VisionTools.BlobTool.BlobToolCtr blobToolCtr = new VisionTools.BlobTool.BlobToolCtr(blobTool);
+                        panel2.Controls.Clear();
+                        panel2.Controls.Add(blobToolCtr);
+                        blobToolCtr.Dock = DockStyle.Fill;
+                        break;
                     default:
                         break;
                 }
@@ -82,9 +95,13 @@ namespace QVision.Frm
             VisionTools.CheckLineTool.CheckLineTool checkLineTool = new VisionTools.CheckLineTool.CheckLineTool();
             Dict.Add(Global.ToolName3, checkLineTool);
 
+            VisionTools.BlobTool.BlobTool blobTool = new VisionTools.BlobTool.BlobTool();
+            Dict.Add(Global.ToolName4, blobTool);
+
             listBox1.Items.Add(Global.ToolName1);
             listBox1.Items.Add(Global.ToolName2);
             listBox1.Items.Add(Global.ToolName3);
+            listBox1.Items.Add(Global.ToolName4);
 
         }
 

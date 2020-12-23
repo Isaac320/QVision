@@ -110,7 +110,7 @@
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 12;
+            this.listBox1.ItemHeight = 21;
             this.listBox1.Location = new System.Drawing.Point(24, 528);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(247, 424);
@@ -118,12 +118,15 @@
             // 
             // button2
             // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(72)))), ((int)(((byte)(160)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Location = new System.Drawing.Point(92, 448);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(102, 49);
             this.button2.TabIndex = 5;
             this.button2.Text = "Search";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // groupBox1
@@ -173,12 +176,15 @@
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(72)))), ((int)(((byte)(160)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(92, 238);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(102, 49);
             this.button1.TabIndex = 3;
             this.button1.Text = "Train";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // hSmartWindowControl2

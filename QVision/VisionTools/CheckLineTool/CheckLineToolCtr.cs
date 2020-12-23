@@ -72,7 +72,7 @@ namespace QVision.VisionTools.CheckLineTool
 
         private void ShowLines()
         {
-            HTuple htemp1 = new HTuple(rectCheck.GetDrawingObjectParams(rectCheck));
+            HTuple htemp1 = new HTuple(rectCheck.GetDrawingObjectParams(rectParams));
             tool.Rect1 = new double[4] { htemp1[0], htemp1[1], htemp1[2], htemp1[3] };
         }
 
@@ -173,7 +173,6 @@ namespace QVision.VisionTools.CheckLineTool
             checkFlag = true;
             updateRect();
             checkFlag = tempFlag;
-
         }
     }
 }

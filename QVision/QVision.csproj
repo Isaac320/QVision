@@ -193,6 +193,13 @@
     <Compile Include="Tools\LogManager.cs" />
     <Compile Include="Tools\MyConfig.cs" />
     <Compile Include="Tools\RecipeTool.cs" />
+    <Compile Include="VisionTools\BlobTool\BlobTool.cs" />
+    <Compile Include="VisionTools\BlobTool\BlobToolCtr.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VisionTools\BlobTool\BlobToolCtr.Designer.cs">
+      <DependentUpon>BlobToolCtr.cs</DependentUpon>
+    </Compile>
     <Compile Include="VisionTools\BParamTool\BParamToolCtr.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -276,6 +283,9 @@
     <EmbeddedResource Include="Report\ReportFrm.resx">
       <DependentUpon>ReportFrm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="VisionTools\BlobTool\BlobToolCtr.resx">
+      <DependentUpon>BlobToolCtr.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="VisionTools\BParamTool\BParamToolCtr.resx">
       <DependentUpon>BParamToolCtr.cs</DependentUpon>
     </EmbeddedResource>
@@ -299,5 +309,6 @@
   <ItemGroup>
     <None Include="res2\icons8_home_page_32px_1.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
