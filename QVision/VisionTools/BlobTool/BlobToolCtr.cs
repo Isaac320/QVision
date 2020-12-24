@@ -65,6 +65,8 @@ namespace QVision.VisionTools.BlobTool
             foreach (HDrawingObject dobj in drawing_objects)
                 dobj.Dispose();
             drawing_objects.Clear();
+            tool.Rects.Clear();
+            tool.blobToolRegion = null;
         }
 
         private void trackBar1_Scroll(object sender, EventArgs e)
@@ -146,9 +148,6 @@ namespace QVision.VisionTools.BlobTool
                 rect1.SetDrawingObjectParams("color", "green");
                 AttachDrawObj(rect1);
             }
-        }
-        
-
-
+        }        
     }
 }

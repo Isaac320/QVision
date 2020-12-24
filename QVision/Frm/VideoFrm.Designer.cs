@@ -40,8 +40,7 @@
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.panel7 = new System.Windows.Forms.Panel();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lb_Check = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
@@ -216,8 +215,7 @@
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.label3);
-            this.groupBox4.Controls.Add(this.label2);
+            this.groupBox4.Controls.Add(this.lb_Check);
             this.groupBox4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox4.Location = new System.Drawing.Point(0, 0);
@@ -227,23 +225,14 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Check Info";
             // 
-            // label3
+            // lb_Check
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(76, 73);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(82, 21);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "XXXXXXXX";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(76, 38);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(82, 21);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "XXXXXXXX";
+            this.lb_Check.AutoSize = true;
+            this.lb_Check.Location = new System.Drawing.Point(71, 55);
+            this.lb_Check.Name = "lb_Check";
+            this.lb_Check.Size = new System.Drawing.Size(50, 21);
+            this.lb_Check.TabIndex = 0;
+            this.lb_Check.Text = "xxxxx";
             // 
             // panel6
             // 
@@ -509,8 +498,7 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lb_Check;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
         private System.Windows.Forms.Panel panel8;

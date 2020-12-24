@@ -46,8 +46,7 @@ namespace QVision.VisionTools.CheckLineTool
                 rectCheck.OnResize(hProcess);               
                 DrawRegions();
                 update();
-            }
-                                 
+            }                                 
         }
 
         private void hProcess(HDrawingObject dobj,HWindow hwin,string type)
@@ -109,14 +108,31 @@ namespace QVision.VisionTools.CheckLineTool
                 {
                     comboBox1.SelectedIndex = 0;
                 }
+
+                tb_clMin.Text = tool.contour_length.min1.ToString();
+                tb_clMax.Text = tool.contour_length.max1.ToString();
+                cb_clFlag.Checked = tool.contour_length.flag;
+
+                tb_dirMin.Text = tool.direction.min1.ToString();
+                tb_dirMax.Text = tool.direction.max1.ToString();
+                cb_dirFlag.Checked = tool.direction.flag;
+
+                tb_lineNum.Text = tool.lineNum.ToString();
                 
             }
         }
 
         private void updateRect()
         {
-            hSmartWindowControl1.HalconWindow.DetachDrawingObjectFromWindow(rectCheck);
-            hSmartWindowControl1.HalconWindow.AttachDrawingObjectToWindow(rectCheck);
+            try
+            {
+                hSmartWindowControl1.HalconWindow.DetachDrawingObjectFromWindow(rectCheck);
+                hSmartWindowControl1.HalconWindow.AttachDrawingObjectToWindow(rectCheck);
+            }
+            catch(Exception ee)
+            {
+
+            }
         }
 
         private void trackBar1_Scroll(object sender, EventArgs e)
@@ -173,6 +189,26 @@ namespace QVision.VisionTools.CheckLineTool
             checkFlag = true;
             updateRect();
             checkFlag = tempFlag;
+        }
+
+        private void btn_Save_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                tool.contour_length.min1 = Convert.ToDouble(tb_clMin.Text);
+                tool.contour_length.max1 = Convert.ToDouble(tb_clMax.Text);
+                tool.contour_length.flag = cb_clFlag.Checked;
+
+                tool.direction.min1 = Convert.ToDouble(tb_dirMin.Text);
+                tool.direction.max1 = Convert.ToDouble(tb_dirMax.Text);
+                tool.direction.flag = cb_dirFlag.Checked;
+
+                tool.lineNum = Convert.ToInt32(tb_lineNum.Text);
+            }
+            catch(Exception ee)
+            {
+                MessageBox.Show(ee.ToString());
+            }
         }
     }
 }

@@ -136,6 +136,19 @@ namespace QVision.Frm
             }
         }
 
+
+        public void showCheckInfo(string s)
+        {
+            if(lb_Check.InvokeRequired)
+            {
+                BeginInvoke(new delegateShowMessage(showCheckInfo), new object[] { s });
+            }
+            else
+            {
+                lb_Check.Text = s;
+            }
+        }
+
         private void bt_pause_Click(object sender, EventArgs e)
         {
             if (Global.ready2Go)

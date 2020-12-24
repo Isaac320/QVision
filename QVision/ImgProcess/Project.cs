@@ -152,6 +152,18 @@ namespace QVision.ImgProcess
                                     checkLineTool.Run(rCheckLine2);
                                     MyForms.videoFrm.showImage(checkLineTool.Lines, 1);
 
+                                    if(!checkLineTool.Result)
+                                    {
+                                        MyForms.videoFrm.showCheckInfo("Lines NG");
+                                    }
+                                    else
+                                    {
+                                        MyForms.videoFrm.showCheckInfo("OK");
+                                    }
+                                }
+                                else
+                                {
+                                    MyForms.videoFrm.showCheckInfo("Not Find");
                                 }
                                
                                
