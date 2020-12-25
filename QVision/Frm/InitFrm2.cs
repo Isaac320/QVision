@@ -36,9 +36,11 @@ namespace QVision.Frm
                     if (rpt != null)
                     {
                         //这边读recipe  以后需要改写 这里默认选了一个测试
-                        string path = @"d:\";
-                        string name = "ss.zl";
-                        Global.Dict = RecipeTool.DeSerializeNow(path, name);
+                        //string path = @"d:\";
+                        //string name = "ss.zl";
+                        //Global.Dict = RecipeTool.DeSerializeNow(path, name);
+
+                        Global.Dict = RecipeTool.DeSerializeNow(Global.RecipePath + "\\",rpt + ".zl");
 
                         //都满足则就运行下面的。
                         Global.LotNum = textBox1.Text;

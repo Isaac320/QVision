@@ -21,6 +21,7 @@ namespace QVision.ImgProcess
 
         VisionTools.MatchTool.MatchTool matchTool;
         VisionTools.CheckLineTool.CheckLineTool checkLineTool;
+        VisionTools.BlobTool.BlobTool blobTool;
 
         private Project() { }
         
@@ -45,6 +46,7 @@ namespace QVision.ImgProcess
         {
            matchTool = Global.Dict[Global.ToolName2] as VisionTools.MatchTool.MatchTool;
            checkLineTool = Global.Dict[Global.ToolName3] as VisionTools.CheckLineTool.CheckLineTool;
+            blobTool = Global.Dict[Global.ToolName4] as VisionTools.BlobTool.BlobTool;
         
         }
 
@@ -133,6 +135,7 @@ namespace QVision.ImgProcess
 
                             matchTool.Image = hImage;
                             checkLineTool.Image = hImage;
+                            blobTool.Image = hImage;
                             //下面随便写个处理过程 无处理
                             for (int i = 1; i < matchTool.RegionNum+1; i++)
                             {
@@ -142,7 +145,9 @@ namespace QVision.ImgProcess
                                 MyForms.videoFrm.showImage(hImage, 1);
                                 MyForms.videoFrm.showImage(region, 1);
 
-                                
+                                //默认结果是好的
+                                FrameResultArr[numFrameResultArr] = 1;
+
                                 if (flag)
                                 {
                                     HRegion rCheckLine = new HRegion(checkLineTool.Rect1[0], checkLineTool.Rect1[1], checkLineTool.Rect1[2], checkLineTool.Rect1[3]);
@@ -155,22 +160,38 @@ namespace QVision.ImgProcess
                                     if(!checkLineTool.Result)
                                     {
                                         MyForms.videoFrm.showCheckInfo("Lines NG");
+                                        FrameResultArr[numFrameResultArr] = 2;
                                     }
-                                    else
+                                    
+                                    HRegion rCheckBlob = matchTool.HomMat.AffineTransRegion(blobTool.blobToolRegion, "nearest_neighbor");
+                                    blobTool.Run(rCheckBlob);
+
+                                    MyForms.videoFrm.showImage(blobTool.Blobs, 1);
+
+                                    if (!blobTool.Result)
+                                    {
+                                        MyForms.videoFrm.showCheckInfo("Blob NG");
+                                        FrameResultArr[numFrameResultArr] = 3;
+                                    }
+
+                                    if(blobTool.Result&&checkLineTool.Result)
                                     {
                                         MyForms.videoFrm.showCheckInfo("OK");
+                                        FrameResultArr[numFrameResultArr] = 1;
                                     }
+                                    
                                 }
                                 else
                                 {
                                     MyForms.videoFrm.showCheckInfo("Not Find");
+                                    FrameResultArr[numFrameResultArr] = 3;
                                 }
                                
                                
 
                                 Thread.Sleep(100);
 
-                                FrameResultArr[numFrameResultArr] = 1;
+                                
                                 numFrameResultArr++;
 
                                 //判断是否暂停

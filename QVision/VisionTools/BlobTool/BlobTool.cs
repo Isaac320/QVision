@@ -15,6 +15,14 @@ namespace QVision.VisionTools.BlobTool
         public double c2;
     }
 
+    [Serializable]
+    public struct Blob_Params
+    {
+        public bool flag;
+        public double min;
+        public double max;
+    }
+
 
     [Serializable]
     public class BlobTool
@@ -28,9 +36,17 @@ namespace QVision.VisionTools.BlobTool
 
         public HRegion blobToolRegion = null;   //合并上面所有的矩形框框得到的区域
 
+        public Blob_Params blobAreaParams = new Blob_Params { flag = false, min = 0, max = 99999 };
+
+
+        public int blobArea = 0;
+
+        private bool result = false;
 
         [NonSerialized]
         private  HRegion blobs = null;
+
+        private HRegion emptyRegion = new HRegion();
 
         public int Low
         {
@@ -56,6 +72,11 @@ namespace QVision.VisionTools.BlobTool
             get { return blobs; }
         }
 
+        public bool Result
+        {
+            get { return result; }
+        }
+
 
         /// <summary>
         /// 合并所有rect
@@ -79,12 +100,70 @@ namespace QVision.VisionTools.BlobTool
             {
                 HImage image = himage.ReduceDomain(blobToolRegion);
                 blobs = image.Threshold((HTuple)low, high);
+                if(blobAreaParams.flag)
+                {
+                    blobs = blobs.Connection();
+                    blobs = blobs.SelectShape("area", "and", blobAreaParams.min, blobAreaParams.max);
+                }
+                blobs=blobs.Union1();
+
+                //blobs为空时候判断 怎么写 写一个空region
+
+                emptyRegion.GenEmptyRegion();
+
+                int tempFlag = emptyRegion.TestEqualRegion(blobs);
+                if(tempFlag==1)
+                {
+                    blobArea = 0;
+                }
+                else
+                {
+                    blobArea = blobs.Area;
+                }
+
+                result = (blobArea == 0);
             }
             catch(Exception ee)
             {
-                
+                System.Windows.Forms.MessageBox.Show(ee.ToString());
             }
         }
+
+
+        public void Run(HRegion hRegion)
+        {
+            try
+            {
+                HImage image = himage.ReduceDomain(hRegion);
+                blobs = image.Threshold((HTuple)low, high);
+                if (blobAreaParams.flag)
+                {
+                    blobs = blobs.Connection();
+                    blobs = blobs.SelectShape("area", "and", blobAreaParams.min, blobAreaParams.max);
+                }
+                blobs = blobs.Union1();
+                emptyRegion.GenEmptyRegion();
+
+                int tempFlag = emptyRegion.TestEqualRegion(blobs);
+                if (tempFlag == 1)
+                {
+                    blobArea = 0;
+                }
+                else
+                {
+                    blobArea = blobs.Area;
+                }
+
+                result = (blobArea == 0);
+            }
+            catch (Exception ee)
+            {
+
+            }
+        }
+
+
+
 
 
     }

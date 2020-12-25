@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReportFrm));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -133,9 +134,10 @@
             // 
             // bt_Query
             // 
-            this.bt_Query.BackColor = System.Drawing.Color.White;
-            //this.bt_Query.BackgroundImage = global::QVision.Properties.Resources._23;
+            this.bt_Query.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(72)))), ((int)(((byte)(160)))));
             this.bt_Query.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.bt_Query.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.bt_Query.Image = ((System.Drawing.Image)(resources.GetObject("bt_Query.Image")));
             this.bt_Query.Location = new System.Drawing.Point(769, 24);
             this.bt_Query.Name = "bt_Query";
             this.bt_Query.Size = new System.Drawing.Size(112, 101);

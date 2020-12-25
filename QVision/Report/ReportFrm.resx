@@ -117,4 +117,27 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="bt_Query.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAO0SURBVHhe7ZpbSxVRFMfFSxa+dFMx7QNEkk9q1LeoqIeiCI0IgqILQUEQFNVTSkUEPUVBCdVL
+        t29RVkQXiOgCZXeKsojst2avMzNMo3k8M3uPnv2DP5zjWmf/1zrHmdkze9d4PB6Px+OGsbGxWtSDdqNL
+        6B76mNAwkpjkdKNa/fj0hSY60DH0CpXLSySfbdfhpg8UPR+dRKOoUmSMQTRXhy82FLoWjaCseYNWq03x
+        oLgGdFYqHYdP6DzaiOQYb0XzVPJa/rYJSY7kjsdp1KC2xYCCmtBtqS6FB2gDmq3p/0VykXwZD1Eat1CT
+        pruFQurRTakqwVe0HdVpatnwWRl7B/qGklxH9ZrqDoqQf8kkj9ESTakYxlqKnsjACQY1xQ0UICe8JHdQ
+        s6ZkBmPKeULmCklWaYpdMG5G74MSIp6iFk3JHMZuQ8/EKIZccRZoij0wPRfYR8hx2qnh3MCjC30Xwxhn
+        NGwHDBejX4F1xE4N5w5ee41liEyWFmk4fzA7GthGPELWzsh4yZxDDrc4hzWcLxjJpel1YBmxWcPWwLPf
+        WIe8QPnfQGGyMrCL+ILmaNgaeMrkS+YacXo1nB+Y7DdeIRc1ZB28h0wJIfs0lB+YXDFeIX0asg7eW00J
+        IUMayg9MZG4fp1tD1sF7uSkhZFhD+YHJB+MVkvmsb7Lg3WJKCBnRUH5g8tN4hczSkHXwbjQlhIxqKD8w
+        SX4Bzu7N8XbyBSTn/ws1ZB28nRwCVX8STF4G+zVkHbydXAYPGK+QCxqyDt6XTQkhViZCK4xXyGdUlKlw
+        j4bzA5M6VISboS3GOsTOzZCAURFvh49oOH8wa0fJVR+XD0R+oDYN2wHDU4F1hMtHYic0bA9MZf3vXWAf
+        If+WrZqSOYyd9lBUlszcrBtinPZY/C7K/MkwY8phd18MErh5LF6CAmSFJomcFJdpSsUwVi+Ss3ySAU1x
+        AwXImt/voJR/kZPkQdSo6WXDZ2WN8BBK3oAJV9GUl90qBvOJmo8jx6wsdJa7ONqHnqM0rqEpf7EVg3la
+        8/L+hnmZStryuEyqRPJattCUlsdldjkecvUp3C8v79drfB3KY4PEW7QmKMIVFDBh8yV4n/UWmQHkdosM
+        BUyq+TjEKt0kdRx16HDuoIiym49DXmmb3B4U3yZXorjb5ChkG/qD4sjCaHE3LGUFTfrmpeMYvnlNmbnQ
+        pG9eOo7hm9eUmQtNVnXznWjKk5wZAc3uCto2VMcvn4SmZQpanc2XoPkufenxeDwez4yhpuYvDOpKih46
+        iBsAAAAASUVORK5CYII=
+</value>
+  </data>
 </root>

@@ -37,6 +37,10 @@ namespace QVision.VisionTools.BlobTool
                 update();
                 trackBar1.Value = tool.Low;
                 trackBar2.Value = tool.High;
+
+                cb_areaFlag.Checked = tool.blobAreaParams.flag;
+                tb_areaMax.Text = tool.blobAreaParams.max.ToString();
+                tb_areaMin.Text = tool.blobAreaParams.min.ToString();
             }
         }
 
@@ -65,8 +69,8 @@ namespace QVision.VisionTools.BlobTool
             foreach (HDrawingObject dobj in drawing_objects)
                 dobj.Dispose();
             drawing_objects.Clear();
-            tool.Rects.Clear();
-            tool.blobToolRegion = null;
+            //tool.Rects.Clear();
+            //tool.blobToolRegion = null;
         }
 
         private void trackBar1_Scroll(object sender, EventArgs e)
@@ -85,7 +89,8 @@ namespace QVision.VisionTools.BlobTool
             else
             {
                 lb_high.Text = tool.High.ToString();
-                lb_low.Text = tool.Low.ToString();                               
+                lb_low.Text = tool.Low.ToString();
+                
             }
         }
 
@@ -100,6 +105,7 @@ namespace QVision.VisionTools.BlobTool
         {
             try
             {
+                tool.Rects.Clear();
                 foreach (var r in drawing_objects)
                 {
                     HTuple htemp1 = new HTuple(r.GetDrawingObjectParams(rectParams));
@@ -118,6 +124,7 @@ namespace QVision.VisionTools.BlobTool
         private void btn_Run_Click(object sender, EventArgs e)
         {
             ShowBlobs();
+            MessageBox.Show(tool.blobArea.ToString());
         }
 
 
@@ -136,6 +143,7 @@ namespace QVision.VisionTools.BlobTool
                 hSmartWindowControl1.HalconWindow.SetDraw("fill");
                 hSmartWindowControl1.HalconWindow.DispObj(tool.Blobs);
             }
+            
         }
 
 
@@ -148,6 +156,21 @@ namespace QVision.VisionTools.BlobTool
                 rect1.SetDrawingObjectParams("color", "green");
                 AttachDrawObj(rect1);
             }
-        }        
+        }
+
+        private void btn_ParamsSave_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                tool.blobAreaParams.min = Convert.ToDouble(tb_areaMin.Text);
+                tool.blobAreaParams.max = Convert.ToDouble(tb_areaMax.Text);
+                tool.blobAreaParams.flag = cb_areaFlag.Checked;
+               
+            }
+            catch (Exception ee)
+            {
+                MessageBox.Show(ee.ToString());
+            }
+        }
     }
 }
