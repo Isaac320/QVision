@@ -143,9 +143,7 @@ namespace QVision.VisionTools.MatchTool
                 }
 
                 tool.Regions=tool.Regions.SelectShape("area", "and", 1, 999999999999999);
-
                 tool.Regions=tool.Regions.SortRegion("character", "true", "row");
-
                 int regionNum = tool.Regions.CountObj();
                 tool.RegionNum = regionNum;
 

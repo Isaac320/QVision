@@ -30,8 +30,24 @@
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.hSmartWindowControl1 = new HalconDotNet.HSmartWindowControl();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btn_Save = new System.Windows.Forms.Button();
+            this.label13 = new System.Windows.Forms.Label();
+            this.tb_lineNum = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.tb_dirMax = new System.Windows.Forms.TextBox();
+            this.tb_dirMin = new System.Windows.Forms.TextBox();
+            this.cb_dirFlag = new System.Windows.Forms.CheckBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.tb_clMax = new System.Windows.Forms.TextBox();
+            this.tb_clMin = new System.Windows.Forms.TextBox();
+            this.cb_clFlag = new System.Windows.Forms.CheckBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -47,31 +63,15 @@
             this.trackBar2 = new System.Windows.Forms.TrackBar();
             this.trackBar1 = new System.Windows.Forms.TrackBar();
             this.label1 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.cb_clFlag = new System.Windows.Forms.CheckBox();
-            this.tb_clMin = new System.Windows.Forms.TextBox();
-            this.tb_clMax = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.tb_dirMin = new System.Windows.Forms.TextBox();
-            this.cb_dirFlag = new System.Windows.Forms.CheckBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.tb_dirMax = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.tb_lineNum = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.btn_Save = new System.Windows.Forms.Button();
+            this.hSmartWindowControl1 = new HalconDotNet.HSmartWindowControl();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
-            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -99,25 +99,6 @@
             this.panel1.Size = new System.Drawing.Size(1256, 1000);
             this.panel1.TabIndex = 0;
             // 
-            // hSmartWindowControl1
-            // 
-            this.hSmartWindowControl1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.hSmartWindowControl1.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
-            this.hSmartWindowControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.hSmartWindowControl1.HDoubleClickToFitContent = true;
-            this.hSmartWindowControl1.HDrawingObjectsModifier = HalconDotNet.HSmartWindowControl.DrawingObjectsModifier.None;
-            this.hSmartWindowControl1.HImagePart = new System.Drawing.Rectangle(0, 0, 640, 480);
-            this.hSmartWindowControl1.HKeepAspectRatio = true;
-            this.hSmartWindowControl1.HMoveContent = true;
-            this.hSmartWindowControl1.HZoomContent = HalconDotNet.HSmartWindowControl.ZoomContent.WheelForwardZoomsIn;
-            this.hSmartWindowControl1.Location = new System.Drawing.Point(0, 0);
-            this.hSmartWindowControl1.Margin = new System.Windows.Forms.Padding(0);
-            this.hSmartWindowControl1.Name = "hSmartWindowControl1";
-            this.hSmartWindowControl1.Size = new System.Drawing.Size(1256, 1000);
-            this.hSmartWindowControl1.TabIndex = 0;
-            this.hSmartWindowControl1.WindowSize = new System.Drawing.Size(1256, 1000);
-            this.hSmartWindowControl1.Load += new System.EventHandler(this.hSmartWindowControl1_Load);
-            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.groupBox2);
@@ -131,6 +112,172 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(344, 1000);
             this.panel2.TabIndex = 1;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.btn_Save);
+            this.groupBox2.Controls.Add(this.label13);
+            this.groupBox2.Controls.Add(this.tb_lineNum);
+            this.groupBox2.Controls.Add(this.label14);
+            this.groupBox2.Controls.Add(this.label9);
+            this.groupBox2.Controls.Add(this.label10);
+            this.groupBox2.Controls.Add(this.tb_dirMax);
+            this.groupBox2.Controls.Add(this.tb_dirMin);
+            this.groupBox2.Controls.Add(this.cb_dirFlag);
+            this.groupBox2.Controls.Add(this.label11);
+            this.groupBox2.Controls.Add(this.label7);
+            this.groupBox2.Controls.Add(this.label5);
+            this.groupBox2.Controls.Add(this.tb_clMax);
+            this.groupBox2.Controls.Add(this.tb_clMin);
+            this.groupBox2.Controls.Add(this.cb_clFlag);
+            this.groupBox2.Controls.Add(this.label4);
+            this.groupBox2.Location = new System.Drawing.Point(35, 486);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(266, 407);
+            this.groupBox2.TabIndex = 6;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Check Line";
+            // 
+            // btn_Save
+            // 
+            this.btn_Save.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(72)))), ((int)(((byte)(160)))));
+            this.btn_Save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Save.ForeColor = System.Drawing.Color.White;
+            this.btn_Save.Location = new System.Drawing.Point(118, 316);
+            this.btn_Save.Name = "btn_Save";
+            this.btn_Save.Size = new System.Drawing.Size(121, 65);
+            this.btn_Save.TabIndex = 17;
+            this.btn_Save.Text = "Save";
+            this.btn_Save.UseVisualStyleBackColor = false;
+            this.btn_Save.Click += new System.EventHandler(this.btn_Save_Click);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(9, 225);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(71, 21);
+            this.label13.TabIndex = 16;
+            this.label13.Text = "number";
+            // 
+            // tb_lineNum
+            // 
+            this.tb_lineNum.Location = new System.Drawing.Point(101, 222);
+            this.tb_lineNum.Name = "tb_lineNum";
+            this.tb_lineNum.Size = new System.Drawing.Size(41, 27);
+            this.tb_lineNum.TabIndex = 14;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(9, 198);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(77, 19);
+            this.label14.TabIndex = 12;
+            this.label14.Text = "line num";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(103, 140);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(44, 21);
+            this.label9.TabIndex = 11;
+            this.label9.Text = "max";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(9, 140);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(38, 21);
+            this.label10.TabIndex = 10;
+            this.label10.Text = "min";
+            // 
+            // tb_dirMax
+            // 
+            this.tb_dirMax.Location = new System.Drawing.Point(153, 137);
+            this.tb_dirMax.Name = "tb_dirMax";
+            this.tb_dirMax.Size = new System.Drawing.Size(41, 27);
+            this.tb_dirMax.TabIndex = 9;
+            // 
+            // tb_dirMin
+            // 
+            this.tb_dirMin.Location = new System.Drawing.Point(53, 137);
+            this.tb_dirMin.Name = "tb_dirMin";
+            this.tb_dirMin.Size = new System.Drawing.Size(41, 27);
+            this.tb_dirMin.TabIndex = 8;
+            // 
+            // cb_dirFlag
+            // 
+            this.cb_dirFlag.AutoSize = true;
+            this.cb_dirFlag.Location = new System.Drawing.Point(224, 144);
+            this.cb_dirFlag.Name = "cb_dirFlag";
+            this.cb_dirFlag.Size = new System.Drawing.Size(15, 14);
+            this.cb_dirFlag.TabIndex = 7;
+            this.cb_dirFlag.UseVisualStyleBackColor = true;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(9, 113);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(120, 19);
+            this.label11.TabIndex = 6;
+            this.label11.Text = "direction (rad)";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(103, 60);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(44, 21);
+            this.label7.TabIndex = 5;
+            this.label7.Text = "max";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(9, 60);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(38, 21);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "min";
+            // 
+            // tb_clMax
+            // 
+            this.tb_clMax.Location = new System.Drawing.Point(153, 57);
+            this.tb_clMax.Name = "tb_clMax";
+            this.tb_clMax.Size = new System.Drawing.Size(41, 27);
+            this.tb_clMax.TabIndex = 3;
+            // 
+            // tb_clMin
+            // 
+            this.tb_clMin.Location = new System.Drawing.Point(53, 57);
+            this.tb_clMin.Name = "tb_clMin";
+            this.tb_clMin.Size = new System.Drawing.Size(41, 27);
+            this.tb_clMin.TabIndex = 2;
+            // 
+            // cb_clFlag
+            // 
+            this.cb_clFlag.AutoSize = true;
+            this.cb_clFlag.Location = new System.Drawing.Point(224, 64);
+            this.cb_clFlag.Name = "cb_clFlag";
+            this.cb_clFlag.Size = new System.Drawing.Size(15, 14);
+            this.cb_clFlag.TabIndex = 1;
+            this.cb_clFlag.UseVisualStyleBackColor = true;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(9, 33);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(161, 19);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "contour length (pix)";
             // 
             // button1
             // 
@@ -296,171 +443,23 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "CheckLine Tool";
             // 
-            // groupBox2
+            // hSmartWindowControl1
             // 
-            this.groupBox2.Controls.Add(this.btn_Save);
-            this.groupBox2.Controls.Add(this.label13);
-            this.groupBox2.Controls.Add(this.tb_lineNum);
-            this.groupBox2.Controls.Add(this.label14);
-            this.groupBox2.Controls.Add(this.label9);
-            this.groupBox2.Controls.Add(this.label10);
-            this.groupBox2.Controls.Add(this.tb_dirMax);
-            this.groupBox2.Controls.Add(this.tb_dirMin);
-            this.groupBox2.Controls.Add(this.cb_dirFlag);
-            this.groupBox2.Controls.Add(this.label11);
-            this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.tb_clMax);
-            this.groupBox2.Controls.Add(this.tb_clMin);
-            this.groupBox2.Controls.Add(this.cb_clFlag);
-            this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Location = new System.Drawing.Point(35, 486);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(266, 407);
-            this.groupBox2.TabIndex = 6;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Check Line";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(9, 33);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(161, 19);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "contour length (pix)";
-            // 
-            // cb_clFlag
-            // 
-            this.cb_clFlag.AutoSize = true;
-            this.cb_clFlag.Location = new System.Drawing.Point(224, 64);
-            this.cb_clFlag.Name = "cb_clFlag";
-            this.cb_clFlag.Size = new System.Drawing.Size(15, 14);
-            this.cb_clFlag.TabIndex = 1;
-            this.cb_clFlag.UseVisualStyleBackColor = true;
-            // 
-            // tb_clMin
-            // 
-            this.tb_clMin.Location = new System.Drawing.Point(53, 57);
-            this.tb_clMin.Name = "tb_clMin";
-            this.tb_clMin.Size = new System.Drawing.Size(41, 27);
-            this.tb_clMin.TabIndex = 2;
-            // 
-            // tb_clMax
-            // 
-            this.tb_clMax.Location = new System.Drawing.Point(153, 57);
-            this.tb_clMax.Name = "tb_clMax";
-            this.tb_clMax.Size = new System.Drawing.Size(41, 27);
-            this.tb_clMax.TabIndex = 3;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(9, 60);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(38, 21);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "min";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(103, 60);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(44, 21);
-            this.label7.TabIndex = 5;
-            this.label7.Text = "max";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(9, 140);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(38, 21);
-            this.label10.TabIndex = 10;
-            this.label10.Text = "min";
-            // 
-            // tb_dirMin
-            // 
-            this.tb_dirMin.Location = new System.Drawing.Point(53, 137);
-            this.tb_dirMin.Name = "tb_dirMin";
-            this.tb_dirMin.Size = new System.Drawing.Size(41, 27);
-            this.tb_dirMin.TabIndex = 8;
-            // 
-            // cb_dirFlag
-            // 
-            this.cb_dirFlag.AutoSize = true;
-            this.cb_dirFlag.Location = new System.Drawing.Point(224, 144);
-            this.cb_dirFlag.Name = "cb_dirFlag";
-            this.cb_dirFlag.Size = new System.Drawing.Size(15, 14);
-            this.cb_dirFlag.TabIndex = 7;
-            this.cb_dirFlag.UseVisualStyleBackColor = true;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(9, 113);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(120, 19);
-            this.label11.TabIndex = 6;
-            this.label11.Text = "direction (rad)";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(103, 140);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(44, 21);
-            this.label9.TabIndex = 11;
-            this.label9.Text = "max";
-            // 
-            // tb_dirMax
-            // 
-            this.tb_dirMax.Location = new System.Drawing.Point(153, 137);
-            this.tb_dirMax.Name = "tb_dirMax";
-            this.tb_dirMax.Size = new System.Drawing.Size(41, 27);
-            this.tb_dirMax.TabIndex = 9;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(9, 225);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(71, 21);
-            this.label13.TabIndex = 16;
-            this.label13.Text = "number";
-            // 
-            // tb_lineNum
-            // 
-            this.tb_lineNum.Location = new System.Drawing.Point(101, 222);
-            this.tb_lineNum.Name = "tb_lineNum";
-            this.tb_lineNum.Size = new System.Drawing.Size(41, 27);
-            this.tb_lineNum.TabIndex = 14;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(9, 198);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(77, 19);
-            this.label14.TabIndex = 12;
-            this.label14.Text = "line num";
-            // 
-            // btn_Save
-            // 
-            this.btn_Save.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(72)))), ((int)(((byte)(160)))));
-            this.btn_Save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Save.ForeColor = System.Drawing.Color.White;
-            this.btn_Save.Location = new System.Drawing.Point(118, 316);
-            this.btn_Save.Name = "btn_Save";
-            this.btn_Save.Size = new System.Drawing.Size(121, 65);
-            this.btn_Save.TabIndex = 17;
-            this.btn_Save.Text = "Save";
-            this.btn_Save.UseVisualStyleBackColor = false;
-            this.btn_Save.Click += new System.EventHandler(this.btn_Save_Click);
+            this.hSmartWindowControl1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.hSmartWindowControl1.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
+            this.hSmartWindowControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.hSmartWindowControl1.HDoubleClickToFitContent = true;
+            this.hSmartWindowControl1.HDrawingObjectsModifier = HalconDotNet.HSmartWindowControl.DrawingObjectsModifier.None;
+            this.hSmartWindowControl1.HImagePart = new System.Drawing.Rectangle(0, 0, 640, 480);
+            this.hSmartWindowControl1.HKeepAspectRatio = true;
+            this.hSmartWindowControl1.HMoveContent = true;
+            this.hSmartWindowControl1.HZoomContent = HalconDotNet.HSmartWindowControl.ZoomContent.WheelForwardZoomsIn;
+            this.hSmartWindowControl1.Location = new System.Drawing.Point(0, 0);
+            this.hSmartWindowControl1.Margin = new System.Windows.Forms.Padding(0);
+            this.hSmartWindowControl1.Name = "hSmartWindowControl1";
+            this.hSmartWindowControl1.Size = new System.Drawing.Size(1256, 1000);
+            this.hSmartWindowControl1.TabIndex = 0;
+            this.hSmartWindowControl1.WindowSize = new System.Drawing.Size(1256, 1000);
             // 
             // CheckLineToolCtr
             // 
@@ -476,13 +475,13 @@
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -491,7 +490,7 @@
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel panel1;
-        private HalconDotNet.HSmartWindowControl hSmartWindowControl1;
+        //private HalconDotNet.HSmartWindowControl hSmartWindowControl1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -525,5 +524,6 @@
         private System.Windows.Forms.CheckBox cb_clFlag;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btn_Save;
+        private HalconDotNet.HSmartWindowControl hSmartWindowControl1;
     }
 }

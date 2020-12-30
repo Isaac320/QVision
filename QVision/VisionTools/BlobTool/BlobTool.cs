@@ -46,7 +46,7 @@ namespace QVision.VisionTools.BlobTool
         [NonSerialized]
         private  HRegion blobs = null;
 
-        private HRegion emptyRegion = new HRegion();
+        
 
         public int Low
         {
@@ -107,12 +107,9 @@ namespace QVision.VisionTools.BlobTool
                 }
                 blobs=blobs.Union1();
 
-                //blobs为空时候判断 怎么写 写一个空region
+                //blobs为空时候判断 怎么写
 
-                emptyRegion.GenEmptyRegion();
-
-                int tempFlag = emptyRegion.TestEqualRegion(blobs);
-                if(tempFlag==1)
+                if(blobs.Area.ToString()=="[]")
                 {
                     blobArea = 0;
                 }
@@ -142,10 +139,9 @@ namespace QVision.VisionTools.BlobTool
                     blobs = blobs.SelectShape("area", "and", blobAreaParams.min, blobAreaParams.max);
                 }
                 blobs = blobs.Union1();
-                emptyRegion.GenEmptyRegion();
+                //blobs为空时候判断 怎么写
 
-                int tempFlag = emptyRegion.TestEqualRegion(blobs);
-                if (tempFlag == 1)
+                if (blobs.Area.ToString() == "[]")
                 {
                     blobArea = 0;
                 }
@@ -161,10 +157,5 @@ namespace QVision.VisionTools.BlobTool
 
             }
         }
-
-
-
-
-
     }
 }
