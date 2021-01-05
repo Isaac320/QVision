@@ -30,6 +30,7 @@
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.hSmartWindowControl1 = new HalconDotNet.HSmartWindowControl();
             this.panel2 = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btn_Save = new System.Windows.Forms.Button();
@@ -63,7 +64,6 @@
             this.trackBar2 = new System.Windows.Forms.TrackBar();
             this.trackBar1 = new System.Windows.Forms.TrackBar();
             this.label1 = new System.Windows.Forms.Label();
-            this.hSmartWindowControl1 = new HalconDotNet.HSmartWindowControl();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -98,6 +98,25 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1256, 1000);
             this.panel1.TabIndex = 0;
+            // 
+            // hSmartWindowControl1
+            // 
+            this.hSmartWindowControl1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.hSmartWindowControl1.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
+            this.hSmartWindowControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.hSmartWindowControl1.HDoubleClickToFitContent = true;
+            this.hSmartWindowControl1.HDrawingObjectsModifier = HalconDotNet.HSmartWindowControl.DrawingObjectsModifier.None;
+            this.hSmartWindowControl1.HImagePart = new System.Drawing.Rectangle(0, 0, 640, 480);
+            this.hSmartWindowControl1.HKeepAspectRatio = true;
+            this.hSmartWindowControl1.HMoveContent = true;
+            this.hSmartWindowControl1.HZoomContent = HalconDotNet.HSmartWindowControl.ZoomContent.WheelForwardZoomsIn;
+            this.hSmartWindowControl1.Location = new System.Drawing.Point(0, 0);
+            this.hSmartWindowControl1.Margin = new System.Windows.Forms.Padding(0);
+            this.hSmartWindowControl1.Name = "hSmartWindowControl1";
+            this.hSmartWindowControl1.Size = new System.Drawing.Size(1256, 1000);
+            this.hSmartWindowControl1.TabIndex = 0;
+            this.hSmartWindowControl1.WindowSize = new System.Drawing.Size(1256, 1000);
+            this.hSmartWindowControl1.Load += new System.EventHandler(this.hSmartWindowControl1_Load);
             // 
             // panel2
             // 
@@ -442,24 +461,6 @@
             this.label1.Size = new System.Drawing.Size(249, 41);
             this.label1.TabIndex = 2;
             this.label1.Text = "CheckLine Tool";
-            // 
-            // hSmartWindowControl1
-            // 
-            this.hSmartWindowControl1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.hSmartWindowControl1.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
-            this.hSmartWindowControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.hSmartWindowControl1.HDoubleClickToFitContent = true;
-            this.hSmartWindowControl1.HDrawingObjectsModifier = HalconDotNet.HSmartWindowControl.DrawingObjectsModifier.None;
-            this.hSmartWindowControl1.HImagePart = new System.Drawing.Rectangle(0, 0, 640, 480);
-            this.hSmartWindowControl1.HKeepAspectRatio = true;
-            this.hSmartWindowControl1.HMoveContent = true;
-            this.hSmartWindowControl1.HZoomContent = HalconDotNet.HSmartWindowControl.ZoomContent.WheelForwardZoomsIn;
-            this.hSmartWindowControl1.Location = new System.Drawing.Point(0, 0);
-            this.hSmartWindowControl1.Margin = new System.Windows.Forms.Padding(0);
-            this.hSmartWindowControl1.Name = "hSmartWindowControl1";
-            this.hSmartWindowControl1.Size = new System.Drawing.Size(1256, 1000);
-            this.hSmartWindowControl1.TabIndex = 0;
-            this.hSmartWindowControl1.WindowSize = new System.Drawing.Size(1256, 1000);
             // 
             // CheckLineToolCtr
             // 

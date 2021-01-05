@@ -116,7 +116,6 @@ namespace QVision.VisionTools.CheckLineTool
                 tb_dirMin.Text = tool.direction.min1.ToString();
                 tb_dirMax.Text = tool.direction.max1.ToString();
                 cb_dirFlag.Checked = tool.direction.flag;
-
                 tb_lineNum.Text = tool.lineNum.ToString();
                 
             }
