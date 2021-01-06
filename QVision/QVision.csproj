@@ -65,6 +65,12 @@
     <Compile Include="Frm\AboutFrm.Designer.cs">
       <DependentUpon>AboutFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frm\CheckFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm\CheckFrm.Designer.cs">
+      <DependentUpon>CheckFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm\EndLotFrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -223,6 +229,9 @@
     </Compile>
     <EmbeddedResource Include="Frm\AboutFrm.resx">
       <DependentUpon>AboutFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm\CheckFrm.resx">
+      <DependentUpon>CheckFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm\EndLotFrm.resx">
       <DependentUpon>EndLotFrm.cs</DependentUpon>

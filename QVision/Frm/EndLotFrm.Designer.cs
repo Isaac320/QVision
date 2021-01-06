@@ -28,8 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.dragControl1 = new QVision.DragControl.DragControl(this.components);
             this.SuspendLayout();
             // 
             // label1
@@ -54,6 +56,10 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // dragControl1
+            // 
+            this.dragControl1.SelectControl = this;
+            // 
             // EndLotFrm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -75,5 +81,6 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
+        private DragControl.DragControl dragControl1;
     }
 }

@@ -146,7 +146,10 @@ namespace QVision.ImgProcess
                                 MyForms.videoFrm.showImage(region, 1);
 
                                 //默认结果是好的
-                                FrameResultArr[numFrameResultArr] = 1;
+
+                                int indexResult = 1;
+                                
+                                //FrameResultArr[numFrameResultArr] = 1;
 
                                 if (flag)
                                 {
@@ -160,7 +163,8 @@ namespace QVision.ImgProcess
                                     if(!checkLineTool.Result)
                                     {
                                         MyForms.videoFrm.showCheckInfo("Lines NG");
-                                        FrameResultArr[numFrameResultArr] = 2;
+                                        //FrameResultArr[numFrameResultArr] = 2;
+                                        indexResult = 2;
                                     }
                                     
                                     HRegion rCheckBlob = matchTool.HomMat.AffineTransRegion(blobTool.blobToolRegion, "nearest_neighbor");
@@ -171,27 +175,53 @@ namespace QVision.ImgProcess
                                     if (!blobTool.Result)
                                     {
                                         MyForms.videoFrm.showCheckInfo("Blob NG");
-                                        FrameResultArr[numFrameResultArr] = 3;
+                                        //FrameResultArr[numFrameResultArr] = 3;
+                                        indexResult = 3;
+                                        MyForms.videoFrm.showImage(blobTool.Blobs, 1);
                                     }
 
                                     if(blobTool.Result&&checkLineTool.Result)
                                     {
                                         MyForms.videoFrm.showCheckInfo("OK");
-                                        FrameResultArr[numFrameResultArr] = 1;
+                                        //FrameResultArr[numFrameResultArr] = 1;
+                                        indexResult = 1;
                                     }
                                     
                                 }
                                 else
                                 {
                                     MyForms.videoFrm.showCheckInfo("Not Find");
-                                    FrameResultArr[numFrameResultArr] = 3;
+                                    //FrameResultArr[numFrameResultArr] = 0;
+                                    indexResult = 0;
                                 }
                                
                                
 
                                 Thread.Sleep(100);
 
-                                
+
+                                //判断是否为NG
+                                if (indexResult != 1)
+                                {
+                                    //显示NG  还没想好怎么显示
+
+                                    //这里判是否要弹出一个对话框，人工判断
+                                    if (Global.needLook)
+                                    {
+                                        //这里弹对话框，让人工选择
+                                        using (CheckFrm checkFrm = new CheckFrm())
+                                        {
+                                            if (checkFrm.ShowDialog() == DialogResult.OK)
+                                            {
+                                                indexResult = Global.needLookNum;   //这边index等于人工选择的num
+                                            }
+                                        }
+                                    }
+                                }
+
+                                FrameResultArr[numFrameResultArr] = indexResult;
+
+
                                 numFrameResultArr++;
 
                                 //判断是否暂停
@@ -315,7 +345,6 @@ namespace QVision.ImgProcess
                         //FrameNum+1
                         Global.FrameNum++;
 
-
                     }
 
                     //这里是一个Tray处理完成,把数据保存到大list里
@@ -430,16 +459,18 @@ namespace QVision.ImgProcess
             Global.runAttrib = s2;
 
             //保存INST数据
-            Model_INST model1 = new Model_INST();
-            model1.lotGUID = Global.lotGUID;
-            model1.lotNo = Global.LotNum;
-            model1.startTime = Global.startTime;
-            model1.endTime = Global.endTime;
-            model1.endLotTime = Global.endLotTime;
-            model1.operatorID = Global.OperatorID;
-            model1.attrib = Global.attrib;
-            model1.runAttrib = Global.runAttrib;
-            model1.reportType = Global.reportType;
+            Model_INST model1 = new Model_INST
+            {
+                lotGUID = Global.lotGUID,
+                lotNo = Global.LotNum,
+                startTime = Global.startTime,
+                endTime = Global.endTime,
+                endLotTime = Global.endLotTime,
+                operatorID = Global.OperatorID,
+                attrib = Global.attrib,
+                runAttrib = Global.runAttrib,
+                reportType = Global.reportType
+            };
             DataBaseTool.InsertModel_INST(model1);
 
 
@@ -458,11 +489,13 @@ namespace QVision.ImgProcess
                         ss.Append(t + ",");
                     }
                     string frameResult = ss.ToString();
-                    Model_FRAME model2 = new Model_FRAME();
-                    model2.lotGUID = Global.lotGUID;
-                    model2.trayIndex = Global.trayIndex;
-                    model2.frameIndex = Global.frameIndex;
-                    model2.unitContent = frameResult;
+                    Model_FRAME model2 = new Model_FRAME
+                    {
+                        lotGUID = Global.lotGUID,
+                        trayIndex = Global.trayIndex,
+                        frameIndex = Global.frameIndex,
+                        unitContent = frameResult
+                    };
                     DataBaseTool.InsertModel_FRAME(model2);
                 }
 
