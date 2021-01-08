@@ -46,6 +46,8 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.lb_time = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.btn_min = new System.Windows.Forms.Button();
+            this.dragControl1 = new QVision.DragControl.DragControl(this.components);
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -200,6 +202,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.btn_min);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.btn_Close);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
@@ -223,7 +226,7 @@
             // 
             // btn_Close
             // 
-            this.btn_Close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Close.Dock = System.Windows.Forms.DockStyle.Right;
             this.btn_Close.FlatAppearance.BorderSize = 0;
             this.btn_Close.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.btn_Close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -262,6 +265,24 @@
             // 
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // btn_min
+            // 
+            this.btn_min.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_min.FlatAppearance.BorderSize = 0;
+            this.btn_min.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.btn_min.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_min.Image = ((System.Drawing.Image)(resources.GetObject("btn_min.Image")));
+            this.btn_min.Location = new System.Drawing.Point(925, 0);
+            this.btn_min.Name = "btn_min";
+            this.btn_min.Size = new System.Drawing.Size(52, 42);
+            this.btn_min.TabIndex = 6;
+            this.btn_min.UseVisualStyleBackColor = true;
+            this.btn_min.Click += new System.EventHandler(this.btn_min_Click);
+            // 
+            // dragControl1
+            // 
+            this.dragControl1.SelectControl = this;
             // 
             // MainFrm2
             // 
@@ -310,5 +331,7 @@
         private System.Windows.Forms.Label lb_time;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btn_min;
+        private DragControl.DragControl dragControl1;
     }
 }

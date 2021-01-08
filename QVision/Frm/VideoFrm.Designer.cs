@@ -132,7 +132,9 @@
             // 
             this.hSmartWindowControl1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.hSmartWindowControl1.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
+            this.hSmartWindowControl1.BackColor = System.Drawing.Color.White;
             this.hSmartWindowControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.hSmartWindowControl1.ForeColor = System.Drawing.Color.Black;
             this.hSmartWindowControl1.HDoubleClickToFitContent = true;
             this.hSmartWindowControl1.HDrawingObjectsModifier = HalconDotNet.HSmartWindowControl.DrawingObjectsModifier.None;
             this.hSmartWindowControl1.HImagePart = new System.Drawing.Rectangle(0, 0, 640, 480);
@@ -457,6 +459,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1400, 800);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "VideoFrm";
             this.Text = "VideoFrm";

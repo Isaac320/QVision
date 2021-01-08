@@ -113,7 +113,7 @@ namespace QVision.Frm
                 fbd.Description = "选择数据保存路径";
                 if (fbd.ShowDialog() == DialogResult.OK)
                 {
-                    lb_XRayImagePath.Text = fbd.SelectedPath;
+                    lb_ReceiptPath.Text = fbd.SelectedPath;
                     Global.RecipePath = fbd.SelectedPath;
                 }
             }
@@ -144,7 +144,7 @@ namespace QVision.Frm
                 fbd.Description = "选择数据保存路径";
                 if (fbd.ShowDialog() == DialogResult.OK)
                 {
-                    lb_XRayImagePath.Text = fbd.SelectedPath;
+                    lb_inkPointPath.Text = fbd.SelectedPath;
                     Global.InkPointPath = fbd.SelectedPath;
                 }
             }
