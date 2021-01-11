@@ -160,12 +160,15 @@
             // 
             // bt_Close
             // 
+            this.bt_Close.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(72)))), ((int)(((byte)(160)))));
+            this.bt_Close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_Close.ForeColor = System.Drawing.Color.White;
             this.bt_Close.Location = new System.Drawing.Point(71, 21);
             this.bt_Close.Name = "bt_Close";
             this.bt_Close.Size = new System.Drawing.Size(96, 62);
             this.bt_Close.TabIndex = 0;
             this.bt_Close.Text = "Close";
-            this.bt_Close.UseVisualStyleBackColor = true;
+            this.bt_Close.UseVisualStyleBackColor = false;
             this.bt_Close.Click += new System.EventHandler(this.bt_Close_Click);
             // 
             // panel2

@@ -31,7 +31,6 @@ namespace QVision.Report
             if (checkBox1.Checked)
             {
                 sql.AppendLine("AND startTime > '" + dateTimePicker1.Value.ToString("yyyy-MM-dd") + "'");
-
             }
             if (checkBox2.Checked)
             {
@@ -71,7 +70,6 @@ namespace QVision.Report
                 lv.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
                 lv.Columns[0].Width = 1;
             }
-
         }
 
         private void listView1_DoubleClick(object sender, EventArgs e)
@@ -89,8 +87,6 @@ namespace QVision.Report
             string sql = "SELECT DISTINCT trayIndex FROM REP_FRAME ";
             DataTable mydt = DataBaseTool.Query(sql);
             dataTableToListview(listView1, mydt);
-
         }
-
     }
 }
