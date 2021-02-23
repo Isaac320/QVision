@@ -50,23 +50,18 @@ namespace QVision.Frm
                         Global.RecipeName = rpt;
 
                         ImgProcess.Project.getInstance().InitRecipe();
-
-
-
                         Global.ready2Go = true;    //准备就绪，开始按钮可以跑
-
                         DialogResult = DialogResult.OK;
                     }
                     else
                     {
-                        MessageBox.Show("未查询到该Device对应的Receipt");
+                        MessageBox.Show("未查询到该Device对应的Recipe");
                     }
                 }
                 else
                 {
                     MessageBox.Show("有空的");
                 }
-
             }
             catch (Exception ee)
             {

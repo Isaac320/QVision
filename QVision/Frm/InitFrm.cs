@@ -39,20 +39,15 @@ namespace QVision.Frm
                         string path = @"d:\";
                         string name = "ss.zl";
                         Global.Dict = RecipeTool.DeSerializeNow(path, name);
-                        
                         //都满足则就运行下面的。
                         Global.LotNum = textBox1.Text;
                         Global.Device = textBox2.Text;
                         Global.OperatorID = textBox3.Text;
                         Global.TotalFrame = int.Parse(textBox4.Text);
                         Global.RecipeName = rpt;
-
                         ImgProcess.Project.getInstance().InitRecipe();
-
-                        
-
+                       
                         Global.ready2Go = true;    //准备就绪，开始按钮可以跑
-
                         DialogResult = DialogResult.OK;                      
                     }
                     else
@@ -64,7 +59,6 @@ namespace QVision.Frm
                 {
                     MessageBox.Show("有空的");
                 }
-
             }
             catch (Exception ee)
             {

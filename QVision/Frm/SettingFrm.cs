@@ -29,6 +29,10 @@ namespace QVision.Frm
             lb_ReceiptPath.Text = Global.RecipePath;
             lb_inkPointPath.Text = Global.InkPointPath;
             lb_lotSummaryPath.Text = Global.LotSummaryPath;
+
+            checkBox1.Checked = Global.needLook;
+            cb_OKSave.Checked = Global.needOKSave;
+            cb_NGSave.Checked = Global.needNGSave;
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -182,6 +186,30 @@ namespace QVision.Frm
             catch (Exception eee)
             {
                 MessageBox.Show(eee.ToString());
+            }
+        }
+
+        private void cb_OKSave_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cb_OKSave.Checked)
+            {
+                Global.needOKSave = true;
+            }
+            else
+            {
+                Global.needOKSave = false;
+            }
+        }
+
+        private void cb_NGSave_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cb_NGSave.Checked)
+            {
+                Global.needNGSave = true;
+            }
+            else
+            {
+                Global.needNGSave = false;
             }
         }
     }

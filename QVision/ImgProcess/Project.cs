@@ -79,6 +79,23 @@ namespace QVision.ImgProcess
 
             Global.FrameNum = 0; //frameNum清0
 
+
+            //创建保存图片的路径
+            string saveImagePath = Global.SaveImagePath + "//" + Global.LotNum + "//" + Global.Device + "//";
+
+            string saveImagePathOK = saveImagePath + "OK" + "//";
+            string saveImagePathNG = saveImagePath + "NG" + "//";
+            if(!Directory.Exists(saveImagePathOK))
+            {
+                Directory.CreateDirectory(saveImagePathOK);
+            }
+
+            if (!Directory.Exists(saveImagePathNG))
+            {
+                Directory.CreateDirectory(saveImagePathNG);
+            }
+
+
             while (Global.FrameNum < Global.TotalFrame)
             {
                 //复制远程电脑上的图片文件夹到自己电脑的目录下
@@ -223,6 +240,28 @@ namespace QVision.ImgProcess
 
 
                                 numFrameResultArr++;
+
+                                string tempImageName= imageFrameNum.ToString() + "_" + "1" + "_" + imageNum.ToString() +"_"+i.ToString()+ ".jpg";
+                                if (indexResult!=1)
+                                {
+                                    if(Global.needNGSave)
+                                    {
+                                        //保存裁剪的NG图片
+                                        HImage ngImage = hImage.ReduceDomain(region).CropDomain();
+                                        ngImage.WriteImage("jpeg", 0, saveImagePathNG + tempImageName);
+                                    }
+                                }
+                                else
+                                {
+                                    if(Global.needOKSave)
+                                    {
+                                        //保存裁剪的OK图片
+                                        HImage okImage = hImage.ReduceDomain(region).CropDomain();
+                                        okImage.WriteImage("jpeg", 0, saveImagePathOK + tempImageName);
+                                    }
+                                }
+
+
 
                                 //判断是否暂停
                                 if (Global.mySwitch1)

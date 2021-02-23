@@ -69,7 +69,6 @@ namespace QVision.Report
             string sql3 = "SELECT operatorID FROM REP_INST WHERE lotGUID = '" + myGuid + "'";
             DataTable mydt3 = DataBaseTool.Query(sql3);
             lb_Operator.Text = "Operator: " + mydt3.Rows[0][0].ToString();
-
         }
 
         public static Point GetPosition(int Num, Frame_Info f)
@@ -88,7 +87,6 @@ namespace QVision.Report
             }
             init();
             dataGridView1.DataSource = mTable;
-
             dataGridView1.Columns[0].Width = 90;
             for (int i = 1; i < 50; i++)
             {
@@ -121,7 +119,6 @@ namespace QVision.Report
                     mTable.Rows[p.X - 1 + startP][p.Y] = tempI[j];
                 }
             }
-
         }
 
         private void dataGridView1_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)

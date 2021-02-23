@@ -22,7 +22,6 @@ namespace QVision.Frm
         {
             InitializeComponent();
             init(tempList);
-
         }
 
         public void init(List<int[]> tempList)
@@ -46,7 +45,6 @@ namespace QVision.Frm
             {
                 listBox1.Items.Add("Frame[" + (i + 1).ToString() + "]: " + tempInt[i].ToString());
             }
-
         }
 
         /// <summary>

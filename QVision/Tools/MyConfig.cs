@@ -38,6 +38,11 @@ namespace QVision.Tools
                 myini.IniWriteValue("Path", "inkPointPath", Global.InkPointPath);
                 myini.IniWriteValue("Path", "lotSummaryPath", Global.LotSummaryPath);
 
+                myini.IniWriteValue("Params", "NeedLook", Global.needLook ? "1" : "0");
+                myini.IniWriteValue("Params", "NeedOKSave", Global.needOKSave ? "1" : "0");
+                myini.IniWriteValue("Params", "NeedNGSave", Global.needNGSave ? "1" : "0");
+
+
             }
             catch (Exception ee)
             {
@@ -74,6 +79,10 @@ namespace QVision.Tools
                 Global.RecipePath = myini.IniReadValue("Path", "receiptPath");
                 Global.InkPointPath = myini.IniReadValue("Path", "inkPointPath");
                 Global.LotSummaryPath = myini.IniReadValue("Path", "lotSummaryPath");
+
+                Global.needLook = myini.IniReadValue("Params", "NeedLook") == "1" ? true : false;
+                Global.needOKSave = myini.IniReadValue("Params", "NeedOKSave") == "1" ? true : false;
+                Global.needNGSave = myini.IniReadValue("Params", "NeedNGSave") == "1" ? true : false;
             }
             catch (Exception ee)
             {
