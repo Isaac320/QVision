@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainFrm2));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_QX = new System.Windows.Forms.Button();
             this.btn_help = new System.Windows.Forms.Button();
             this.btn_report = new System.Windows.Forms.Button();
             this.btn_config = new System.Windows.Forms.Button();
@@ -48,7 +49,6 @@
             this.lb_time = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.dragControl1 = new QVision.DragControl.DragControl(this.components);
-            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -59,7 +59,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(72)))), ((int)(((byte)(160)))));
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btn_QX);
             this.panel1.Controls.Add(this.btn_help);
             this.panel1.Controls.Add(this.btn_report);
             this.panel1.Controls.Add(this.btn_config);
@@ -74,6 +74,24 @@
             this.panel1.Size = new System.Drawing.Size(165, 720);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // btn_QX
+            // 
+            this.btn_QX.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btn_QX.FlatAppearance.BorderSize = 0;
+            this.btn_QX.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_QX.ForeColor = System.Drawing.Color.White;
+            this.btn_QX.Image = ((System.Drawing.Image)(resources.GetObject("btn_QX.Image")));
+            this.btn_QX.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_QX.Location = new System.Drawing.Point(0, 643);
+            this.btn_QX.Margin = new System.Windows.Forms.Padding(0);
+            this.btn_QX.Name = "btn_QX";
+            this.btn_QX.Size = new System.Drawing.Size(171, 77);
+            this.btn_QX.TabIndex = 8;
+            this.btn_QX.Text = "             Permission";
+            this.btn_QX.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_QX.UseVisualStyleBackColor = true;
+            this.btn_QX.Click += new System.EventHandler(this.btn_QX_Click);
             // 
             // btn_help
             // 
@@ -286,23 +304,6 @@
             // 
             this.dragControl1.SelectControl = this;
             // 
-            // button1
-            // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(0, 643);
-            this.button1.Margin = new System.Windows.Forms.Padding(0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(171, 77);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "             Permission";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // MainFrm2
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -352,6 +353,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btn_min;
         private DragControl.DragControl dragControl1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_QX;
     }
 }

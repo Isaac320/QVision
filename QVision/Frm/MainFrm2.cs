@@ -176,5 +176,10 @@ namespace QVision.Frm
         {
             this.WindowState = FormWindowState.Minimized;
         }
+        
+        private void btn_QX_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
